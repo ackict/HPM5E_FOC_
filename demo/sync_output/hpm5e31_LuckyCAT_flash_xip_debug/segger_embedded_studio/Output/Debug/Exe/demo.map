@@ -1,0 +1,2229 @@
+***********************************************************************************************
+***                                                                                         ***
+***                                   LINK INFORMATION                                    ***
+***                                                                                         ***
+***********************************************************************************************
+
+Linker version:
+
+  SEGGER RISC-V Linker 4.44c compiled Jan 14 2026 18:18:04
+  Copyright (c) 2017-2025 SEGGER Microcontroller GmbH    www.segger.com
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                    MODULE SUMMARY                                     ***
+***                                                                                         ***
+***********************************************************************************************
+
+Memory use by input file:
+
+  Object File                                       RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  board.c.o                                           1 832       1 103                       4
+  hpm_adc16_drv.c.o                                   1 680                                    
+  hpm_bootheader.c.o                                                144                        
+  hpm_clock_drv.c.o                                   1 770         174                       4
+  hpm_debug_console.c.o                                 292                       8          12
+  hpm_gpio_drv.c.o                                      436                                    
+  hpm_l1c_drv.c.o                                       132                                    
+  hpm_pcfg_drv.c.o                                      290          32                        
+  hpm_pllctlv2_drv.c.o                                  970          97                        
+  hpm_pmp_drv.c.o                                       992         128                        
+  hpm_pwmv2_drv.c.o                                      90                                    
+  hpm_sysctl_drv.c.o                                    420                                    
+  hpm_uart_drv.c.o                                    1 684          20                        
+  pinmux.c.o                                            242                                    
+  pwm.c.o                                             6 706       2 536           3       4 321
+  reset.c.o                                             196                                    
+  startup.s.o                                           106         322                        
+  system.c.o                                            130                                    
+  trap.c.o                                              412          64                        
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (19 objects)                              18 380       4 620          11       4 341
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  heapops_basic_rv32imac_balanced.a                      22                                   4
+  libc_rv32imac_balanced.a                            9 278       2 156                      24
+  mbops_timeops_rv32imac_balanced.a                     244         541          20           4
+  SEGGER_RV32_crtinit_rv32imac_balanced.a                68                                    
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (4 archives)                               9 612       2 697          20          32
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Linker created (shared data, fills, blocks):                    1 728                  32 768
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                             27 992       9 045          31      37 141
+  =============================================  ==========  ==========  ==========  ==========
+
+Memory use by archive member:
+
+  Archive member                                    RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+                                                      3 606         251                        
+  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+                                                         84                                    
+  convops.o (libc_rv32imac_balanced.a)                  150                                    
+  execops.o (libc_rv32imac_balanced.a)                  220          25                      24
+  fileops.o (libc_rv32imac_balanced.a)                   68                                    
+  floatasmops_rv.o (libc_rv32imac_balanced.a)         1 850         256                        
+  floatops.o (libc_rv32imac_balanced.a)                 964         384                        
+  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+                                                         22                                   4
+  intops.o (libc_rv32imac_balanced.a)                 1 270       1 024                        
+  mbops.o (mbops_timeops_rv32imac_balanced.a)           244         541          20           4
+  prinops.o (libc_rv32imac_balanced.a)                  474         192                        
+  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+                                                         68                                    
+  strasmops_rv.o (libc_rv32imac_balanced.a)             342                                    
+  strops.o (libc_rv32imac_balanced.a)                   158                                    
+  utilops.o (libc_rv32imac_balanced.a)                   92          24                        
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (15 members from 4 archives)               9 612       2 697          20          32
+  Objects (19 files)                                 18 380       4 620          11       4 341
+  Linker created (shared data, fills, blocks):                    1 728                  32 768
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                             27 992       9 045          31      37 141
+  =============================================  ==========  ==========  ==========  ==========
+
+Memory use by linker:
+
+  Description                                       RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Copied blocks                                                      20                        
+  Initialization table                                            1 708                        
+  Memory for block 'heap'                                                                16 384
+  Memory for block 'stack'                                                               16 384
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (linker created):                                      1 728                  32 768
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Objects (19 files)                                 18 380       4 620          11       4 341
+  Archives (4 files)                                  9 612       2 697          20          32
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                             27 992       9 045          31      37 141
+  =============================================  ==========  ==========  ==========  ==========
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                    SECTION DETAIL                                     ***
+***                                                                                         ***
+***********************************************************************************************
+
+Sections by address:
+
+  Range              Symbol or [section] Name         Size  Al  Init  Ac  Object File
+  -----------------  -------------------------  ----------  --  ----  --  -----------
+  00000000-00000141  __vector_table                    322  512
+                                                                Init  RO  startup.s.o
+  00000142-00000143  ( ALIGN .=.+2 )                     2   -  ----  -   -
+  00000144-000003E7  isr_adc16                         676   4  Init  RX  pwm.c.o
+  000003E8-00000541  irq_handler_trap                  346   4  Init  RX  trap.c.o
+  00000542-00000543  ( ALIGN .=.+2 )                     2   -  ----  -   -
+  00000544-00000547  nmi_handler                         4   4  Init  RX  startup.s.o
+  00000548-0000061D  board_timer_isr                   214   4  Init  RX  board.c.o
+  0000061E-0000061F  ( ALIGN .=.+2 )                     2   -  ----  -   -
+  00000620-001FFFFF  ( UNUSED .=.+2095584 )      2 095 584   -  ----  -   -
+  00200000-00203FFF  [.bss.block.heap]              16 384   8  None  ZI  [ Linker created ]
+  00204000-0021BFFF  ( UNUSED .=.+98304 )           98 304   -  ----  -   -
+  0021C000-0021FFFF  [.bss.block.stack]             16 384  16  None  ZI  [ Linker created ]
+  01200000-01200017  __SEGGER_RTL_aSigTab               24   4  Zero  ZI  execops.o (libc_rv32imac_balanced.a)
+  01200018-0120001B  timer_cb                            4   4  Zero  ZI  board.c.o
+  0120001C-0120001F  reload                              4   4  Zero  ZI  pwm.c.o
+  01200020-01200023  phase                               4   4  Zero  ZI  pwm.c.o
+  01200024-01200027  hpm_core_clock                      4   4  Zero  ZI  hpm_clock_drv.c.o
+  01200028-0120002B  g_console_uart                      4   4  Zero  ZI  hpm_debug_console.c.o
+  0120002C-0120002F  g_beta                              4   4  Zero  ZI  pwm.c.o
+  01200030-01200033  g_alpha                             4   4  Zero  ZI  pwm.c.o
+  01200034-01200037  freq                                4   4  Zero  ZI  pwm.c.o
+  01200038-0120003B  dtc_c                               4   4  Zero  ZI  pwm.c.o
+  0120003C-0120003F  dtc_b                               4   4  Zero  ZI  pwm.c.o
+  01200040-01200043  dtc_a                               4   4  Zero  ZI  pwm.c.o
+  01200044-01200047  __SEGGER_RTL_stdout_file            4   4  Zero  ZI  hpm_debug_console.c.o
+  01200048-0120004B  __SEGGER_RTL_stdin_file             4   4  Zero  ZI  hpm_debug_console.c.o
+  0120004C-0120004F  __SEGGER_RTL_heap_globals.0
+                                                         4   4  Zero  ZI  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  01200050-01200050  trig_complete_flag                  1   1  Zero  ZI  pwm.c.o
+  01200051-01200053  ( UNUSED .=.+3 )                    3   -  ----  -   -
+  01200054-01200057  stdout                              4   4  Init  RW  hpm_debug_console.c.o
+  01200058-0120005B  stdin                               4   4  Init  RW  hpm_debug_console.c.o
+  0120005C-0120005E  trig_adc_channel                    3   4  Init  RW  pwm.c.o
+  0120005F-0120005F  ( ALIGN .=.+1 )                     1   -  ----  -   -
+  01200060-01200063  __SEGGER_RTL_locale_ptr             4   4  Zero  ZI  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  01200064-01200077  __SEGGER_RTL_global_locale
+                                                        20   4  Init  RW  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  01200078-0122FFFF  ( UNUSED .=.+196488 )         196 488   -  ----  -   -
+  01230000-012310BF  seq_buff                        4 288   4  None  ZI  pwm.c.o
+  012310C0-800003FF  ( UNUSED .=.+2128409408 )  2 128 409 408
+                                                             -  ----  -   -
+  80000400-8000040F  option                             16   4  Cnst  RO  board.c.o
+  80000410-80000FFF  ( UNUSED .=.+3056 )             3 056   -  ----  -   -
+  80001000-8000100F  header                             16   4  Cnst  RO  hpm_bootheader.c.o
+  80001010-8000108F  fw_info                           128   4  Cnst  RO  hpm_bootheader.c.o
+  80001090-80002FFF  ( UNUSED .=.+8048 )             8 048   -  ----  -   -
+  80003000-80003065  _start                            102   2  Code  RX  startup.s.o
+  80003066-80003067  __SEGGER_RTL_SIGNAL_SIG_DFL
+                                                         2   2  Code  RX  execops.o (libc_rv32imac_balanced.a)
+  80003068-80003107  __SEGGER_RTL_ipow10               160   8  Cnst  RO  prinops.o (libc_rv32imac_balanced.a)
+  80003108-8000390B  sinTable_f32                    2 052   4  Cnst  RO  pwm.c.o
+  8000390C-80003AD3  [.rodata]                         456   4  Cnst  RO  pwm.c.o
+  80003AD4-80003AEF  [.rodata.svm]                      28   4  Cnst  RO  pwm.c.o
+  80003AF0-80003B2F  [.rodata.exception_handler]
+                                                        64   4  Cnst  RO  trap.c.o
+  80003B30-80003B37  s_wdgs                              8   4  Cnst  RO  hpm_clock_drv.c.o
+  80003B38-80003B63  [.rodata.clock_get_frequency]
+                                                        44   4  Cnst  RO  hpm_clock_drv.c.o
+  80003B64-80003B83  [.rodata.get_frequency_for_source]
+                                                        32   4  Cnst  RO  hpm_clock_drv.c.o
+  80003B84-80003BAF  [.rodata.clock_get_source]
+                                                        44   4  Cnst  RO  hpm_clock_drv.c.o
+  80003BB0-80003BDB  [.rodata.clock_set_source_divider]
+                                                        44   4  Cnst  RO  hpm_clock_drv.c.o
+  80003BDC-80003BEF  [.rodata.uart_init]                20   4  Cnst  RO  hpm_uart_drv.c.o
+  80003BF0-80003C2F  [.rodata.write_pmp_addr]           64   4  Cnst  RO  hpm_pmp_drv.c.o
+  80003C30-80003C6F  [.rodata.write_pma_addr]           64   4  Cnst  RO  hpm_pmp_drv.c.o
+  80003C70-80003C8F  [.rodata]                          32   4  Cnst  RO  hpm_pcfg_drv.c.o
+  80003C90-80003D8F  __SEGGER_RTL_fdiv_reciprocal_table
+                                                       256   4  Cnst  RO  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80003D90-80003DA7  __SEGGER_RTL_aPower2f              24   4  Cnst  RO  utilops.o (libc_rv32imac_balanced.a)
+  80003DA8-80003E7F  [.rodata.libc.__SEGGER_RTL_vfprintf_short_float_long]
+                                                       216   4  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  80003E80-80003E8B  __SEGGER_RTL_c_locale              12   4  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  80003E8C-80003EAB  __SEGGER_RTL_codeset_ascii
+                                                        32   4  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  80003EAC-80003F03  __SEGGER_RTL_c_locale_data
+                                                        88   4  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  80003F04-80003F05  s_adc_clk_mux_node                  2   4  Cnst  RO  hpm_clock_drv.c.o
+  80003F06-80003F17  core_local_mem_to_sys_address
+                                                        18   2  Code  RX  pwm.c.o
+  80003F18-80004356  [.rodata]                       1 087   4  Cnst  RO  board.c.o
+  80004357-8000436B  [.rodata.libc..L.str.1]            21   1  Cnst  RO  execops.o (libc_rv32imac_balanced.a)
+  8000436C-800043CC  [.rodata]                          97   4  Cnst  RO  hpm_pllctlv2_drv.c.o
+  800043CD-800043D3  [.rodata.libc..L.str]               7   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  800043D4-80004429  trgm_output_config                 86   2  Code  RX  pwm.c.o
+  8000442A-8000443F  pwmv2_shadow_register_unlock
+                                                        22   2  Code  RX  pwm.c.o
+  80004440-80004471  pwmv2_channel_enable_output
+                                                        50   2  Code  RX  pwm.c.o
+  80004472-800044BF  pwmv2_set_fault_mode               78   2  Code  RX  pwm.c.o
+  800044C0-80004505  pwmv2_set_trigout_cmp_index
+                                                        70   2  Code  RX  pwm.c.o
+  80004506-8000451F  pwmv2_enable_shadow_lock_feature
+                                                        26   2  Code  RX  pwm.c.o
+  80004520-8000456D  pwmv2_reload_select_input_trigger
+                                                        78   2  Code  RX  pwm.c.o
+  8000456E-800045B3  pwmv2_counter_select_data_offset_from_shadow_value
+                                                        70   2  Code  RX  pwm.c.o
+  800045B4-800045E9  pwmv2_counter_burst_disable
+                                                        54   2  Code  RX  pwm.c.o
+  800045EA-8000461B  pwmv2_start_pwm_output             50   2  Code  RX  pwm.c.o
+  8000461C-80004645  pwmv2_enable_counter               42   2  Code  RX  pwm.c.o
+  80004646-800046A3  pwmv2_select_cmp_source            94   2  Code  RX  pwm.c.o
+  800046A4-800046B9  adc16_init_pmt_dma                 22   2  Code  RX  pwm.c.o
+  800046BA-800046E3  gpio_toggle_pin                    42   2  Code  RX  pwm.c.o
+  800046E4-800046FD  gpio_get_port_interrupt_flags
+                                                        26   2  Code  RX  pwm.c.o
+  800046FE-8000471F  synt_enable_counter                34   2  Code  RX  pwm.c.o
+  80004720-80004741  synt_reset_counter                 34   2  Code  RX  pwm.c.o
+  80004742-80004773  synt_set_comparator                50   2  Code  RX  pwm.c.o
+  80004774-80004785  synt_set_reload                    18   2  Code  RX  pwm.c.o
+  80004786-80004801  pwm_fault_async                   124   2  Code  RX  pwm.c.o
+  80004802-80004815  sync_start                         20   2  Code  RX  pwm.c.o
+  80004816-80004881  init_start_trgm_connect           108   2  Code  RX  pwm.c.o
+  80004882-80004B47  pwm_sync_three_submodules_handware_config
+                                                       710   2  Code  RX  pwm.c.o
+  80004B48-80004B7F  init_trigger_mux                   56   2  Code  RX  pwm.c.o
+  80004B80-80004C8D  init_common_config                270   2  Code  RX  pwm.c.o
+  80004C8E-80004D13  init_preemption_config            134   2  Code  RX  pwm.c.o
+  80004D14-80004E11  sin_f32                           254   2  Code  RX  pwm.c.o
+  80004E12-80004E85  inverse_park                      116   2  Code  RX  pwm.c.o
+  80004E86-8000530B  svm                             1 158   2  Code  RX  pwm.c.o
+  8000530C-8000551D  FOC_voltage                       530   2  Code  RX  pwm.c.o
+  8000551E-800055C7  _clean_up                         170   2  Code  RX  reset.c.o
+  800055C8-800055D9  syscall_handler                    18   2  Code  RX  trap.c.o
+  800055DA-8000562F  system_init                        86   2  Code  RX  system.c.o
+  80005630-80005659  sysctl_resource_target_is_busy
+                                                        42   2  Code  RX  hpm_sysctl_drv.c.o
+  8000565A-800056E7  sysctl_config_clock               142   2  Code  RX  hpm_sysctl_drv.c.o
+  800056E8-80005761  hpm_csr_get_core_cycle            122   2  Code  RX  hpm_clock_drv.c.o
+  80005762-8000580D  clock_get_frequency               172   2  Code  RX  hpm_clock_drv.c.o
+  8000580E-800058BB  get_frequency_for_source          174   2  Code  RX  hpm_clock_drv.c.o
+  800058BC-80005927  get_frequency_for_ip_in_common_group
+                                                       108   2  Code  RX  hpm_clock_drv.c.o
+  80005928-80005A49  clock_get_source                  290   2  Code  RX  hpm_clock_drv.c.o
+  80005A4A-80005AD7  clock_set_adc_source              142   2  Code  RX  hpm_clock_drv.c.o
+  80005AD8-80005B9B  clock_set_source_divider          196   2  Code  RX  hpm_clock_drv.c.o
+  80005B9C-80005BD5  clock_add_to_group                 58   2  Code  RX  hpm_clock_drv.c.o
+  80005BD6-80005C67  clock_cpu_delay_ms                146   2  Code  RX  hpm_clock_drv.c.o
+  80005C68-80005C9B  l1c_dc_enable                      52   2  Code  RX  hpm_l1c_drv.c.o
+  80005C9C-80005CC9  l1c_ic_enable                      46   2  Code  RX  hpm_l1c_drv.c.o
+  80005CCA-80005CD3  l1c_dc_enable_writearound          10   2  Code  RX  hpm_l1c_drv.c.o
+  80005CD4-80005D09  init_gpio_pins                     54   2  Code  RX  pinmux.c.o
+  80005D0A-80005D33  sysctl_clock_set_preset            42   2  Code  RX  board.c.o
+  80005D34-80005D59  pllctlv2_xtal_set_rampup_time
+                                                        38   2  Code  RX  board.c.o
+  80005D5A-80005DA7  board_init_console                 78   2  Code  RX  board.c.o
+  80005DA8-80005DDD  board_print_banner                 54   2  Code  RX  board.c.o
+  80005DDE-80005DE3  board_get_led_gpio_off_level
+                                                         6   2  Code  RX  board.c.o
+  80005DE4-80005E81  board_init_adc_clock              158   2  Code  RX  board.c.o
+  80005E82-8000604D  uart_init                         460   2  Code  RX  hpm_uart_drv.c.o
+  8000604E-8000609B  uart_send_byte                     78   2  Code  RX  hpm_uart_drv.c.o
+  8000609C-80006111  uart_init_txline_idle_detection
+                                                       118   2  Code  RX  hpm_uart_drv.c.o
+  80006112-8000617F  read_pmp_cfg                      110   2  Code  RX  hpm_pmp_drv.c.o
+  80006180-80006225  write_pmp_addr                    166   2  Code  RX  hpm_pmp_drv.c.o
+  80006226-80006293  read_pma_cfg                      110   2  Code  RX  hpm_pmp_drv.c.o
+  80006294-80006339  write_pma_addr                    166   2  Code  RX  hpm_pmp_drv.c.o
+  8000633A-8000647F  gpio_config_pin_interrupt         326   2  Code  RX  hpm_gpio_drv.c.o
+  80006480-800064ED  gpio_set_pin_output_with_initial
+                                                       110   2  Code  RX  hpm_gpio_drv.c.o
+  800064EE-80006547  pwmv2_config_async_fault_source
+                                                        90   2  Code  RX  hpm_pwmv2_drv.c.o
+  80006548-8000658D  pllctlv2_pll_is_stable             70   2  Code  RX  hpm_pllctlv2_drv.c.o
+  8000658E-8000664D  pllctlv2_init_pll_with_freq
+                                                       192   2  Code  RX  hpm_pllctlv2_drv.c.o
+  8000664E-80006687  adc16_get_default_config           58   2  Code  RX  hpm_adc16_drv.c.o
+  80006688-80006761  pcfg_dcdc_switch_to_dcm_mode
+                                                       218   2  Code  RX  hpm_pcfg_drv.c.o
+  80006762-800067CB  __SEGGER_RTL_xtoa                 106   2  Code  RX  convops.o (libc_rv32imac_balanced.a)
+  800067CC-80006819  __SEGGER_RTL_X_assert              78   2  Code  RX  execops.o (libc_rv32imac_balanced.a)
+  8000681A-8000681B  __SEGGER_RTL_SIGNAL_SIG_ERR
+                                                         2   2  Code  RX  execops.o (libc_rv32imac_balanced.a)
+  8000681C-8000681D  __SEGGER_RTL_SIGNAL_SIG_IGN
+                                                         2   2  Code  RX  execops.o (libc_rv32imac_balanced.a)
+  8000681E-80006825  __subsf3                            8   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80006826-800069D3  __addsf3                          430   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  800069D4-80006A0D  __ltsf2                            58   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80006A0E-80006A43  __lesf2                            54   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80006A44-80006A75  __gtsf2                            50   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80006A76-80006AB3  __gesf2                            62   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80006AB4-80006AFD  __fixsfsi                          74   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80006AFE-80006B2F  __fixunssfsi                       50   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80006B30-80006B95  __floatsisf                       102   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80006B96-80006BEB  __floatunsisf                      86   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80006BEC-80006C95  __floatundisf                     170   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80006C96-80006D1B  __truncdfsf2                      134   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  80006D1C-80006D49  frexpf                             46   2  Code  RX  floatops.o (libc_rv32imac_balanced.a)
+  80006D4A-80006E2D  sqrtf                             228   2  Code  RX  floatops.o (libc_rv32imac_balanced.a)
+  80006E2E-80006E37  abs                                10   2  Code  RX  intops.o (libc_rv32imac_balanced.a)
+  80006E38-80006EBD  memcpy                            134   2  Code  RX  strasmops_rv.o (libc_rv32imac_balanced.a)
+  80006EBE-80006F5B  strnlen                           158   2  Code  RX  strops.o (libc_rv32imac_balanced.a)
+  80006F5C-80006FFB  __SEGGER_RTL_putc                 160   2  Code  RX  prinops.o (libc_rv32imac_balanced.a)
+  80006FFC-8000701D  __SEGGER_RTL_prin_flush            34   2  Code  RX  prinops.o (libc_rv32imac_balanced.a)
+  8000701E-80007051  __SEGGER_RTL_print_padding
+                                                        52   2  Code  RX  prinops.o (libc_rv32imac_balanced.a)
+  80007052-8000706B  __SEGGER_RTL_pre_padding           26   2  Code  RX  prinops.o (libc_rv32imac_balanced.a)
+  8000706C-80007093  vfprintf                           40   2  Code  RX  prinops.o (libc_rv32imac_balanced.a)
+  80007094-800070FF  vfprintf_l                        108   2  Code  RX  prinops.o (libc_rv32imac_balanced.a)
+  80007100-80007109  __SEGGER_RTL_stream_write          10   2  Code  RX  prinops.o (libc_rv32imac_balanced.a)
+  8000710A-80007135  printf                             44   2  Code  RX  prinops.o (libc_rv32imac_balanced.a)
+  80007136-80007F4B  __SEGGER_RTL_vfprintf_short_float_long
+                                                     3 606   2  Code  RX  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  80007F4C-80007F5F  __SEGGER_init_heap                 20   2  Code  RX  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  80007F60-80007F75  __SEGGER_RTL_init_heap             22   2  Code  RX  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  80007F76-80007F87  __SEGGER_RTL_ascii_toupper
+                                                        18   2  Code  RX  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  80007F88-80007F95  __SEGGER_RTL_ascii_tolower
+                                                        14   2  Code  RX  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  80007F96-80007FA7  __SEGGER_RTL_ascii_towupper
+                                                        18   2  Code  RX  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  80007FA8-80007FB5  __SEGGER_RTL_ascii_towlower
+                                                        14   2  Code  RX  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  80007FB6-80007FCD  pwmv2_shadow_register_lock
+                                                        24   2  Code  RX  pwm.c.o
+  80007FCE-8000800D  pwmv2_set_shadow_val               64   2  Code  RX  pwm.c.o
+  8000800E-80008041  pwmv2_disable_four_cmp             52   2  Code  RX  pwm.c.o
+  80008042-80008071  pwmv2_enable_async_fault           48   2  Code  RX  pwm.c.o
+  80008072-800080A1  pwmv2_enable_output_invert
+                                                        48   2  Code  RX  pwm.c.o
+  800080A2-800080D5  pwmv2_channel_disable_output
+                                                        52   2  Code  RX  pwm.c.o
+  800080D6-8000811D  pwmv2_set_reload_update_time
+                                                        72   2  Code  RX  pwm.c.o
+  8000811E-80008151  pwmv2_reset_counter                52   2  Code  RX  pwm.c.o
+  80008152-80008165  adc16_get_status_flags             20   2  Code  RX  pwm.c.o
+  80008166-8000817D  adc16_clear_status_flags           24   2  Code  RX  pwm.c.o
+  8000817E-800081A1  adc16_enable_interrupts            36   2  Code  RX  pwm.c.o
+  800081A2-800081CD  gpio_set_pin_input                 44   2  Code  RX  pwm.c.o
+  800081CE-800081F9  gpio_clear_pin_interrupt_flag
+                                                        44   2  Code  RX  pwm.c.o
+  800081FA-80008225  gpio_enable_pin_interrupt          44   2  Code  RX  pwm.c.o
+  80008226-8000828D  init_synt_timebase                104   2  Code  RX  pwm.c.o
+  8000828E-800082AD  pwm_start_same_time                32   2  Code  RX  pwm.c.o
+  800082AE-80008335  init_trigger_target               136   2  Code  RX  pwm.c.o
+  80008336-80008411  gpio_input_interrupt              220   2  Code  RX  pwm.c.o
+  80008412-800084DB  main                              202   2  Code  RX  pwm.c.o
+  800084DC-800085E7  cos_f32                           268   2  Code  RX  pwm.c.o
+  800085E8-800085FD  reset_handler                      22   2  Code  RX  reset.c.o
+  800085FE-80008601  _init                               4   2  Code  RX  reset.c.o
+  80008602-80008605  mchtmr_isr                          4   2  Code  RX  trap.c.o
+  80008606-80008609  swi_isr                             4   2  Code  RX  trap.c.o
+  8000860A-80008631  exception_handler                  40   2  Code  RX  trap.c.o
+  80008632-8000865D  enable_plic_feature                44   2  Code  RX  system.c.o
+  8000865E-80008685  sysctl_clock_target_is_busy
+                                                        40   2  Code  RX  hpm_sysctl_drv.c.o
+  80008686-80008749  sysctl_enable_group_resource
+                                                       196   2  Code  RX  hpm_sysctl_drv.c.o
+  8000874A-800087DD  get_frequency_for_adc             148   2  Code  RX  hpm_clock_drv.c.o
+  800087DE-80008811  get_frequency_for_ewdg             52   2  Code  RX  hpm_clock_drv.c.o
+  80008812-80008839  get_frequency_for_pewdg            40   2  Code  RX  hpm_clock_drv.c.o
+  8000883A-80008865  clock_connect_group_to_cpu
+                                                        44   2  Code  RX  hpm_clock_drv.c.o
+  80008866-80008897  clock_get_core_clock_ticks_per_ms
+                                                        50   2  Code  RX  hpm_clock_drv.c.o
+  80008898-800088B3  clock_update_core_clock            28   2  Code  RX  hpm_clock_drv.c.o
+  800088B4-800088CB  l1c_dc_invalidate_all              24   2  Code  RX  hpm_l1c_drv.c.o
+  800088CC-8000890F  init_uart_pins                     68   2  Code  RX  pinmux.c.o
+  80008910-8000895F  init_pwm_pins                      80   2  Code  RX  pinmux.c.o
+  80008960-80008987  init_adc16_pins                    40   2  Code  RX  pinmux.c.o
+  80008988-800089AB  gptmr_check_status                 36   2  Code  RX  board.c.o
+  800089AC-800089BF  gptmr_clear_status                 20   2  Code  RX  board.c.o
+  800089C0-800089EB  gpio_set_pin_input                 44   2  Code  RX  board.c.o
+  800089EC-80008ABB  board_print_clock_freq            208   2  Code  RX  board.c.o
+  80008ABC-80008AD5  board_init                         26   2  Code  RX  board.c.o
+  80008AD6-80008AE9  board_delay_ms                     20   2  Code  RX  board.c.o
+  80008AEA-80008B21  board_init_gpio_pins               56   2  Code  RX  board.c.o
+  80008B22-80008C8B  board_init_pmp                    362   2  Code  RX  board.c.o
+  80008C8C-80008E53  board_init_clock                  456   2  Code  RX  board.c.o
+  80008E54-80008E61  board_init_adc16_pins              14   2  Code  RX  board.c.o
+  80008E62-80008E9D  uart_modem_config                  60   2  Code  RX  hpm_uart_drv.c.o
+  80008E9E-80008EB9  uart_disable_irq                   28   2  Code  RX  hpm_uart_drv.c.o
+  80008EBA-80008ED1  uart_enable_irq                    24   2  Code  RX  hpm_uart_drv.c.o
+  80008ED2-80008F65  uart_default_config               148   2  Code  RX  hpm_uart_drv.c.o
+  80008F66-800091C9  uart_calculate_baudrate           612   2  Code  RX  hpm_uart_drv.c.o
+  800091CA-80009209  uart_flush                         64   2  Code  RX  hpm_uart_drv.c.o
+  8000920A-80009265  uart_init_rxline_idle_detection
+                                                        92   2  Code  RX  hpm_uart_drv.c.o
+  80009266-800092C1  write_pmp_cfg                      92   2  Code  RX  hpm_pmp_drv.c.o
+  800092C2-8000931D  write_pma_cfg                      92   2  Code  RX  hpm_pmp_drv.c.o
+  8000931E-8000941D  pmp_config                        256   2  Code  RX  hpm_pmp_drv.c.o
+  8000941E-80009475  pllctlv2_pll_clk_is_stable
+                                                        88   2  Code  RX  hpm_pllctlv2_drv.c.o
+  80009476-80009503  pllctlv2_set_postdiv              142   2  Code  RX  hpm_pllctlv2_drv.c.o
+  80009504-8000964F  pllctlv2_get_pll_freq_in_hz
+                                                       332   2  Code  RX  hpm_pllctlv2_drv.c.o
+  80009650-800096E1  pllctlv2_get_pll_postdiv_freq_in_hz
+                                                       146   2  Code  RX  hpm_pllctlv2_drv.c.o
+  800096E2-80009711  adc16_get_channel_default_config
+                                                        48   2  Code  RX  hpm_adc16_drv.c.o
+  80009712-80009A59  adc16_do_calibration              840   2  Code  RX  hpm_adc16_drv.c.o
+  80009A5A-80009B9F  adc16_init                        326   2  Code  RX  hpm_adc16_drv.c.o
+  80009BA0-80009C4B  adc16_init_channel                172   2  Code  RX  hpm_adc16_drv.c.o
+  80009C4C-80009CFB  adc16_set_pmt_config              176   2  Code  RX  hpm_adc16_drv.c.o
+  80009CFC-80009D37  adc16_enable_pmt_queue             60   2  Code  RX  hpm_adc16_drv.c.o
+  80009D38-80009D7F  pcfg_dcdc_set_voltage              72   2  Code  RX  hpm_pcfg_drv.c.o
+  80009D80-80009E0B  console_init                      140   2  Code  RX  hpm_debug_console.c.o
+  80009E0C-80009E8B  __SEGGER_RTL_X_file_write         128   2  Code  RX  hpm_debug_console.c.o
+  80009E8C-80009E97  __SEGGER_RTL_X_file_stat           12   2  Code  RX  hpm_debug_console.c.o
+  80009E98-80009EA3  __SEGGER_RTL_X_file_bufsize
+                                                        12   2  Code  RX  hpm_debug_console.c.o
+  80009EA4-80009ED3  __riscv_save_12                    48   2  Code  RX  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  80009ED4-80009EF7  __riscv_restore_12                 36   2  Code  RX  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  80009EF8-80009F23  itoa                               44   2  Code  RX  convops.o (libc_rv32imac_balanced.a)
+  80009F24-80009F2D  abort                              10   2  Code  RX  execops.o (libc_rv32imac_balanced.a)
+  80009F2E-80009F85  raise                              88   2  Code  RX  execops.o (libc_rv32imac_balanced.a)
+  80009F86-80009FAB  __SEGGER_RTL_puts_no_nl            38   2  Code  RX  execops.o (libc_rv32imac_balanced.a)
+  80009FAC-80009FEB  fwrite                             64   2  Code  RX  fileops.o (libc_rv32imac_balanced.a)
+  80009FEC-80009FEF  setvbuf                             4   2  Code  RX  fileops.o (libc_rv32imac_balanced.a)
+  80009FF0-8000A09F  __mulsf3                          176   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  8000A0A0-8000A19F  __divsf3                          256   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  8000A1A0-8000A1CB  __eqsf2                            44   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  8000A1CC-8000A22B  __fixunssfdi                       96   2  Code  RX  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  8000A22C-8000A293  __SEGGER_RTL_ldouble_to_double
+                                                       104   2  Code  RX  floatops.o (libc_rv32imac_balanced.a)
+  8000A294-8000A2AD  __trunctfsf2                       26   2  Code  RX  floatops.o (libc_rv32imac_balanced.a)
+  8000A2AE-8000A2B9  __SEGGER_RTL_float32_isnan
+                                                        12   2  Code  RX  floatops.o (libc_rv32imac_balanced.a)
+  8000A2BA-8000A2C9  __SEGGER_RTL_float32_isinf
+                                                        16   2  Code  RX  floatops.o (libc_rv32imac_balanced.a)
+  8000A2CA-8000A2E1  __SEGGER_RTL_float32_isnormal
+                                                        24   2  Code  RX  floatops.o (libc_rv32imac_balanced.a)
+  8000A2E2-8000A2E5  __SEGGER_RTL_float32_signbit
+                                                         4   2  Code  RX  floatops.o (libc_rv32imac_balanced.a)
+  8000A2E6-8000A329  ldexpf                             68   2  Code  RX  floatops.o (libc_rv32imac_balanced.a)
+  8000A32A-8000A475  fmodf                             332   2  Code  RX  floatops.o (libc_rv32imac_balanced.a)
+  8000A476-8000A4DD  floorf                            104   2  Code  RX  floatops.o (libc_rv32imac_balanced.a)
+  8000A4DE-8000A9C9  __udivdi3                       1 260   2  Code  RX  intops.o (libc_rv32imac_balanced.a)
+  8000A9CA-8000ADC9  __SEGGER_RTL_Moeller_inverse_lut
+                                                     1 024   2  Cnst  RO  intops.o (libc_rv32imac_balanced.a)
+  8000ADCA-8000AE31  memset                            104   2  Code  RX  strasmops_rv.o (libc_rv32imac_balanced.a)
+  8000AE32-8000AE99  strlen                            104   2  Code  RX  strasmops_rv.o (libc_rv32imac_balanced.a)
+  8000AE9A-8000AEF5  __SEGGER_RTL_pow10f                92   2  Code  RX  utilops.o (libc_rv32imac_balanced.a)
+  8000AEF6-8000AF11  __SEGGER_RTL_current_locale
+                                                        28   2  Code  RX  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000AF12-8000AF3D  __SEGGER_RTL_ascii_mbtowc          44   2  Code  RX  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000AF3E-8000AF51  __SEGGER_RTL_ascii_wctomb          20   2  Code  RX  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000AF52-8000AF7D  __SEGGER_RTL_ascii_isctype
+                                                        44   2  Code  RX  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000AF7E-8000AFA9  __SEGGER_RTL_ascii_iswctype
+                                                        44   2  Code  RX  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000AFAA-8000B000  __SEGGER_RTL_c_locale_month_names
+                                                        87   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B001-8000B007  __SEGGER_RTL_c_locale_am_pm_indicator
+                                                         7   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B008-8000B016  __SEGGER_RTL_c_locale_date_time_format
+                                                        15   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B017-8000B018  [.rodata.libc..L.str]               2   1  Cnst  RO  execops.o (libc_rv32imac_balanced.a)
+  8000B019-8000B01A  [.rodata.libc..L.str.2]             2   1  Cnst  RO  execops.o (libc_rv32imac_balanced.a)
+  8000B01B-8000B054  __SEGGER_RTL_c_locale_day_names
+                                                        58   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B055-8000B056  [.rodata.libc..L.str]               2   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B057-8000B058  __SEGGER_RTL_data_utf8_period
+                                                         2   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B059-8000B05D  [.rodata.libc..L.str.1]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  8000B05E-8000B062  [.rodata.libc..L.str.2]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  8000B063-8000B067  [.rodata.libc..L.str.3]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  8000B068-8000B06C  [.rodata.libc..L.str.4]             5   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  8000B06D-8000B075  __SEGGER_RTL_c_locale_date_format
+                                                         9   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B076-8000B07E  __SEGGER_RTL_c_locale_time_format
+                                                         9   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B07F-8000B09B  __SEGGER_RTL_c_locale_abbrev_day_names
+                                                        29   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B09C-8000B0CC  __SEGGER_RTL_c_locale_abbrev_month_names
+                                                        49   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B0CD-8000B0CD  __SEGGER_RTL_data_empty_string
+                                                         1   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B0CE-8000B0DA  __SEGGER_RTL_ascii_ctype_mask
+                                                        13   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B0DB-8000B0DB  ( UNUSED .=.+1 )                    1   -  ----  -   -
+  8000B0DC-8000B0EF  [.rodata.block.tdata.copy]
+                                                        20   4  Cnst  RO  [ Linker created ]
+  8000B0F0-8000B26F  __SEGGER_RTL_aSqrtData            384   1  Cnst  RO  floatops.o (libc_rv32imac_balanced.a)
+  8000B270-8000B27F  __SEGGER_RTL_hex_uc                16   1  Cnst  RO  prinops.o (libc_rv32imac_balanced.a)
+  8000B280-8000B28F  __SEGGER_RTL_hex_lc                16   1  Cnst  RO  prinops.o (libc_rv32imac_balanced.a)
+  8000B290-8000B293  [.rodata.libc..L.str.5]             4   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  8000B294-8000B297  [.rodata.libc..L.str.6]             4   1  Cnst  RO  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  8000B298-8000B317  __SEGGER_RTL_ascii_ctype_map
+                                                       128   1  Cnst  RO  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  8000B318-8000B387  __SEGGER_init_table__             112   4  Cnst  RO  [ Linker created ]
+  8000B388-8000B9C3  __SEGGER_init_data__            1 596   4  Cnst  RO  [ Linker created ]
+  8000B9C4-8000B9D7  __SEGGER_init_zero                 20   2  Code  RX  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  8000B9D8-8000B9F3  __SEGGER_init_copy                 28   2  Code  RX  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                      SYMBOL LIST                                      ***
+***                                                                                         ***
+***********************************************************************************************
+
+RAM function symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  board_timer_isr            0x00000548          54      4  Init  Gb  board.c.o
+  default_isr_14             0x0000057E         158      4  Init  Gb  board.c.o
+  default_isr_3              0x0000034A         158      4  Init  Gb  pwm.c.o
+  default_isr_42             0x000001EA         160      4  Init  Gb  pwm.c.o
+  irq_handler_trap           0x000003E8         344      4  Init  Gb  trap.c.o
+  isr_adc16                  0x00000144         178      4  Init  Gb  pwm.c.o
+  isr_gpio                   0x0000028A         192      4  Init  Gb  pwm.c.o
+
+RAM function symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x00000144  isr_adc16                         178      4  Init  Gb  pwm.c.o
+  0x000001EA  default_isr_42                    160      4  Init  Gb  pwm.c.o
+  0x0000028A  isr_gpio                          192      4  Init  Gb  pwm.c.o
+  0x0000034A  default_isr_3                     158      4  Init  Gb  pwm.c.o
+  0x000003E8  irq_handler_trap                  344      4  Init  Gb  trap.c.o
+  0x00000548  board_timer_isr                    54      4  Init  Gb  board.c.o
+  0x0000057E  default_isr_14                    158      4  Init  Gb  board.c.o
+
+RAM function symbols by descending size:
+
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  irq_handler_trap                  344      4  Init  Gb  trap.c.o
+  isr_gpio                          192      4  Init  Gb  pwm.c.o
+  isr_adc16                         178      4  Init  Gb  pwm.c.o
+  default_isr_42                    160      4  Init  Gb  pwm.c.o
+  default_isr_14                    158      4  Init  Gb  board.c.o
+  default_isr_3                     158      4  Init  Gb  pwm.c.o
+  board_timer_isr                    54      4  Init  Gb  board.c.o
+
+Function symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  FOC_voltage                0x8000530C         662      2  Code  Gb  pwm.c.o
+  __SEGGER_RTL_SIGNAL_SIG_DFL
+                             0x80003066           2      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_SIGNAL_SIG_ERR
+                             0x8000681A           2      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_SIGNAL_SIG_IGN
+                             0x8000681C           2      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_X_assert      0x800067CC         114      2  Code  Wk  execops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_X_file_bufsize
+                             0x80009E98          12      2  Code  Gb  hpm_debug_console.c.o
+  __SEGGER_RTL_X_file_stat   0x80009E8C          12      2  Code  Gb  hpm_debug_console.c.o
+  __SEGGER_RTL_X_file_write  0x80009E0C         140      2  Code  Gb  hpm_debug_console.c.o
+  __SEGGER_RTL_ascii_isctype
+                             0x8000AF52          44      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_iswctype
+                             0x8000AF7E          44      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_mbtowc  0x8000AF12          44      2  Code  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_tolower
+                             0x80007F88          14      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_toupper
+                             0x80007F76          18      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_towlower
+                             0x80007FA8          14      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_towupper
+                             0x80007F96          18      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_wctomb  0x8000AF3E          20      2  Code  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_current_locale
+                             0x8000AEF6          28      2  Code  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_float32_isinf
+                             0x8000A2BA          16      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_float32_isnan
+                             0x8000A2AE          12      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_float32_isnormal
+                             0x8000A2CA          24      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_float32_signbit
+                             0x8000A2E2           4      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_init_heap     0x80007F60          22      2  Code  Wk  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  __SEGGER_RTL_ldouble_to_double
+                             0x8000A22C         104      2  Code  Lc  floatops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_pow10f        0x8000AE9A         104      2  Code  Gb  utilops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_pre_padding   0x80007052          38      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_prin_flush    0x80006FFC          34      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_print_padding
+                             0x8000701E          58      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_putc          0x80006F5C         166      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_puts_no_nl    0x80009F86          48      2  Code  Lc  execops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_stream_write  0x80007100          14      2  Code  Lc  prinops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_vfprintf      0x80007136       4 010      2  Code  Gb  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_vfprintf_short_float_long
+                             0x80007136       4 010      2  Code  Gb  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_xtoa          0x80006762         106      2  Code  Lc  convops.o (libc_rv32imac_balanced.a)
+  __SEGGER_init_copy         0x8000B9D8          28      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  __SEGGER_init_done         0x80003040                  2  Code  Gb  startup.s.o
+  __SEGGER_init_heap         0x80007F4C          26      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  __SEGGER_init_zero         0x8000B9C4          20      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  __addsf3                   0x80006826         430      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __divsf3                   0x8000A0A0         260      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __eqsf2                    0x8000A1A0          44      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __fixsfsi                  0x80006AB4          74      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __fixunssfdi               0x8000A1CC          96      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __fixunssfsi               0x80006AFE          50      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __floatsisf                0x80006B30         102      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __floatundisf              0x80006BEC         170      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __floatunsisf              0x80006B96          86      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __gesf2                    0x80006A76          62      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __gtsf2                    0x80006A44          50      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __lesf2                    0x80006A0E          54      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __ltsf2                    0x800069D4          58      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __mulsf3                   0x80009FF0         176      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __nesf2                    0x8000A1A0          44      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_0          0x80009EF2                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_1          0x80009EF0                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_10         0x80009EDA                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_11         0x80009ED8                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_12         0x80009ED4          36      2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_2          0x80009EEE                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_3          0x80009EEC                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_4          0x80009EE8                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_5          0x80009EE6                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_6          0x80009EE4                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_7          0x80009EE2                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_8          0x80009EDE                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_9          0x80009EDC                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_10            0x80009EAC                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_11            0x80009EAC                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_12            0x80009EA4          48      2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_4             0x80009EBA                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_5             0x80009EBA                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_6             0x80009EBA                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_7             0x80009EBA                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_8             0x80009EAC                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_9             0x80009EAC                  2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __subsf3                   0x8000681E          14      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __truncdfsf2               0x80006C96         134      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __trunctfsf2               0x8000A294          36      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  __udivdi3                  0x8000A4DE       1 260      2  Code  Wk  intops.o (libc_rv32imac_balanced.a)
+  _clean_up                  0x8000551E         170      2  Code  Wk  reset.c.o
+  _init                      0x800085FE           4      2  Code  Wk  reset.c.o
+  _start                     0x80003000         142      2  Code  Gb  startup.s.o
+  abort                      0x80009F24          16      2  Code  Wk  execops.o (libc_rv32imac_balanced.a)
+  abs                        0x80006E2E          10      2  Code  Wk  intops.o (libc_rv32imac_balanced.a)
+  adc16_clear_status_flags   0x80008166          24      2  Code  Lc  pwm.c.o
+  adc16_do_calibration       0x80009712         844      2  Code  Lc  hpm_adc16_drv.c.o
+  adc16_enable_interrupts    0x8000817E          36      2  Code  Lc  pwm.c.o
+  adc16_enable_pmt_queue     0x80009CFC          60      2  Code  Gb  hpm_adc16_drv.c.o
+  adc16_get_channel_default_config
+                             0x800096E2          48      2  Code  Gb  hpm_adc16_drv.c.o
+  adc16_get_default_config   0x8000664E          58      2  Code  Gb  hpm_adc16_drv.c.o
+  adc16_get_status_flags     0x80008152          20      2  Code  Lc  pwm.c.o
+  adc16_init                 0x80009A5A         332      2  Code  Gb  hpm_adc16_drv.c.o
+  adc16_init_channel         0x80009BA0         172      2  Code  Gb  hpm_adc16_drv.c.o
+  adc16_init_pmt_dma         0x800046A4          22      2  Code  Lc  pwm.c.o
+  adc16_set_pmt_config       0x80009C4C         176      2  Code  Gb  hpm_adc16_drv.c.o
+  board_delay_ms             0x80008AD6          24      2  Code  Gb  board.c.o
+  board_get_led_gpio_off_level
+                             0x80005DDE           6      2  Code  Gb  board.c.o
+  board_init                 0x80008ABC          52      2  Code  Gb  board.c.o
+  board_init_adc16_pins      0x80008E54          20      2  Code  Gb  board.c.o
+  board_init_adc_clock       0x80005DE4         206      2  Code  Gb  board.c.o
+  board_init_clock           0x80008C8C         600      2  Code  Gb  board.c.o
+  board_init_console         0x80005D5A          98      2  Code  Gb  board.c.o
+  board_init_gpio_pins       0x80008AEA          80      2  Code  Gb  board.c.o
+  board_init_pmp             0x80008B22         396      2  Code  Gb  board.c.o
+  board_print_banner         0x80005DA8          70      2  Code  Gb  board.c.o
+  board_print_clock_freq     0x800089EC         328      2  Code  Gb  board.c.o
+  clock_add_to_group         0x80005B9C          62      2  Code  Gb  hpm_clock_drv.c.o
+  clock_connect_group_to_cpu
+                             0x8000883A          44      2  Code  Gb  hpm_clock_drv.c.o
+  clock_cpu_delay_ms         0x80005BD6         162      2  Code  Gb  hpm_clock_drv.c.o
+  clock_get_core_clock_ticks_per_ms
+                             0x80008866          56      2  Code  Gb  hpm_clock_drv.c.o
+  clock_get_frequency        0x80005762         230      2  Code  Gb  hpm_clock_drv.c.o
+  clock_get_source           0x80005928         298      2  Code  Gb  hpm_clock_drv.c.o
+  clock_set_adc_source       0x80005A4A         142      2  Code  Gb  hpm_clock_drv.c.o
+  clock_set_source_divider   0x80005AD8         206      2  Code  Gb  hpm_clock_drv.c.o
+  clock_update_core_clock    0x80008898          32      2  Code  Gb  hpm_clock_drv.c.o
+  console_init               0x80009D80         160      2  Code  Gb  hpm_debug_console.c.o
+  core_local_mem_to_sys_address
+                             0x80003F06          18      2  Code  Lc  pwm.c.o
+  cos_f32                    0x800084DC         348      2  Code  Gb  pwm.c.o
+  enable_plic_feature        0x80008632          44      2  Code  Gb  system.c.o
+  exception_handler          0x8000860A          44      2  Code  Wk  trap.c.o
+  exit                       0x8000305A           2      2  Code  Gb  startup.s.o
+  floorf                     0x8000A476         104      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  fmodf                      0x8000A32A         348      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  frexpf                     0x80006D1C          46      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  fwrite                     0x80009FAC          76      2  Code  Wk  fileops.o (libc_rv32imac_balanced.a)
+  get_frequency_for_adc      0x8000874A         156      2  Code  Lc  hpm_clock_drv.c.o
+  get_frequency_for_ewdg     0x800087DE          60      2  Code  Lc  hpm_clock_drv.c.o
+  get_frequency_for_ip_in_common_group
+                             0x800058BC         114      2  Code  Lc  hpm_clock_drv.c.o
+  get_frequency_for_pewdg    0x80008812          40      2  Code  Lc  hpm_clock_drv.c.o
+  get_frequency_for_source   0x8000580E         206      2  Code  Gb  hpm_clock_drv.c.o
+  gpio_clear_pin_interrupt_flag
+                             0x800081CE          44      2  Code  Lc  pwm.c.o
+  gpio_config_pin_interrupt  0x8000633A         326      2  Code  Gb  hpm_gpio_drv.c.o
+  gpio_enable_pin_interrupt  0x800081FA          44      2  Code  Lc  pwm.c.o
+  gpio_get_port_interrupt_flags
+                             0x800046E4          26      2  Code  Lc  pwm.c.o
+  gpio_input_interrupt       0x80008336         252      2  Code  Gb  pwm.c.o
+  gpio_set_pin_input         0x800081A2          44      2  Code  Lc  pwm.c.o
+  gpio_set_pin_input         0x800089C0          44      2  Code  Lc  board.c.o
+  gpio_set_pin_output_with_initial
+                             0x80006480         110      2  Code  Gb  hpm_gpio_drv.c.o
+  gpio_toggle_pin            0x800046BA          42      2  Code  Lc  pwm.c.o
+  gptmr_check_status         0x80008988          36      2  Code  Lc  board.c.o
+  gptmr_clear_status         0x800089AC          20      2  Code  Lc  board.c.o
+  hpm_csr_get_core_cycle     0x800056E8         122      2  Code  Lc  hpm_clock_drv.c.o
+  init_adc16_pins            0x80008960          40      2  Code  Gb  pinmux.c.o
+  init_common_config         0x80004B80         286      2  Code  Gb  pwm.c.o
+  init_gpio_pins             0x80005CD4          54      2  Code  Gb  pinmux.c.o
+  init_preemption_config     0x80004C8E         166      2  Code  Gb  pwm.c.o
+  init_pwm_pins              0x80008910          80      2  Code  Gb  pinmux.c.o
+  init_start_trgm_connect    0x80004816         126      2  Code  Lc  pwm.c.o
+  init_synt_timebase         0x80008226         124      2  Code  Lc  pwm.c.o
+  init_trigger_mux           0x80004B48          62      2  Code  Gb  pwm.c.o
+  init_trigger_target        0x800082AE         144      2  Code  Gb  pwm.c.o
+  init_uart_pins             0x800088CC          68      2  Code  Gb  pinmux.c.o
+  inverse_park               0x80004E12         150      2  Code  Gb  pwm.c.o
+  itoa                       0x80009EF8          48      2  Code  Wk  convops.o (libc_rv32imac_balanced.a)
+  l1c_dc_enable              0x80005C68          58      2  Code  Gb  hpm_l1c_drv.c.o
+  l1c_dc_enable_writearound  0x80005CCA          10      2  Code  Gb  hpm_l1c_drv.c.o
+  l1c_dc_invalidate_all      0x800088B4          24      2  Code  Gb  hpm_l1c_drv.c.o
+  l1c_ic_enable              0x80005C9C          46      2  Code  Gb  hpm_l1c_drv.c.o
+  ldexpf                     0x8000A2E6          68      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  main                       0x80008412         308      2  Code  Gb  pwm.c.o
+  mchtmr_isr                 0x80008602           4      2  Code  Wk  trap.c.o
+  memcpy                     0x80006E38         134      2  Code  Gb  strasmops_rv.o (libc_rv32imac_balanced.a)
+  memset                     0x8000ADCA         104      2  Code  Gb  strasmops_rv.o (libc_rv32imac_balanced.a)
+  pcfg_dcdc_set_voltage      0x80009D38          72      2  Code  Gb  hpm_pcfg_drv.c.o
+  pcfg_dcdc_switch_to_dcm_mode
+                             0x80006688         222      2  Code  Gb  hpm_pcfg_drv.c.o
+  pllctlv2_get_pll_freq_in_hz
+                             0x80009504         344      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  pllctlv2_get_pll_postdiv_freq_in_hz
+                             0x80009650         152      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  pllctlv2_init_pll_with_freq
+                             0x8000658E         198      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  pllctlv2_pll_clk_is_stable
+                             0x8000941E          88      2  Code  Lc  hpm_pllctlv2_drv.c.o
+  pllctlv2_pll_is_stable     0x80006548          70      2  Code  Lc  hpm_pllctlv2_drv.c.o
+  pllctlv2_set_postdiv       0x80009476         148      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  pllctlv2_xtal_set_rampup_time
+                             0x80005D34          38      2  Code  Lc  board.c.o
+  pmp_config                 0x8000931E         284      2  Code  Gb  hpm_pmp_drv.c.o
+  printf                     0x8000710A          50      2  Code  Wk  prinops.o (libc_rv32imac_balanced.a)
+  pwm_fault_async            0x80004786         166      2  Code  Gb  pwm.c.o
+  pwm_start_same_time        0x8000828E          48      2  Code  Gb  pwm.c.o
+  pwm_sync_three_submodules_handware_config
+                             0x80004882       1 010      2  Code  Lc  pwm.c.o
+  pwmv2_channel_disable_output
+                             0x800080A2          52      2  Code  Lc  pwm.c.o
+  pwmv2_channel_enable_output
+                             0x80004440          50      2  Code  Lc  pwm.c.o
+  pwmv2_config_async_fault_source
+                             0x800064EE          90      2  Code  Gb  hpm_pwmv2_drv.c.o
+  pwmv2_counter_burst_disable
+                             0x800045B4          54      2  Code  Lc  pwm.c.o
+  pwmv2_counter_select_data_offset_from_shadow_value
+                             0x8000456E          70      2  Code  Lc  pwm.c.o
+  pwmv2_disable_four_cmp     0x8000800E          52      2  Code  Lc  pwm.c.o
+  pwmv2_enable_async_fault   0x80008042          48      2  Code  Lc  pwm.c.o
+  pwmv2_enable_counter       0x8000461C          42      2  Code  Lc  pwm.c.o
+  pwmv2_enable_output_invert
+                             0x80008072          48      2  Code  Lc  pwm.c.o
+  pwmv2_enable_shadow_lock_feature
+                             0x80004506          26      2  Code  Lc  pwm.c.o
+  pwmv2_reload_select_input_trigger
+                             0x80004520          78      2  Code  Lc  pwm.c.o
+  pwmv2_reset_counter        0x8000811E          52      2  Code  Lc  pwm.c.o
+  pwmv2_select_cmp_source    0x80004646          94      2  Code  Lc  pwm.c.o
+  pwmv2_set_fault_mode       0x80004472          78      2  Code  Lc  pwm.c.o
+  pwmv2_set_reload_update_time
+                             0x800080D6          72      2  Code  Lc  pwm.c.o
+  pwmv2_set_shadow_val       0x80007FCE          64      2  Code  Lc  pwm.c.o
+  pwmv2_set_trigout_cmp_index
+                             0x800044C0          70      2  Code  Lc  pwm.c.o
+  pwmv2_shadow_register_lock
+                             0x80007FB6          24      2  Code  Lc  pwm.c.o
+  pwmv2_shadow_register_unlock
+                             0x8000442A          22      2  Code  Lc  pwm.c.o
+  pwmv2_start_pwm_output     0x800045EA          50      2  Code  Lc  pwm.c.o
+  raise                      0x80009F2E          92      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  read_pma_cfg               0x80006226         110      2  Code  Gb  hpm_pmp_drv.c.o
+  read_pmp_cfg               0x80006112         110      2  Code  Gb  hpm_pmp_drv.c.o
+  reset_handler              0x800085E8          32      2  Code  Wk  reset.c.o
+  setvbuf                    0x80009FEC           4      2  Code  Wk  fileops.o (libc_rv32imac_balanced.a)
+  sin_f32                    0x80004D14         326      2  Code  Gb  pwm.c.o
+  sqrtf                      0x80006D4A         302      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  start                      0x80003054                  2  Code  Gb  startup.s.o
+  strlen                     0x8000AE32         104      2  Code  Gb  strasmops_rv.o (libc_rv32imac_balanced.a)
+  strnlen                    0x80006EBE         158      2  Code  Wk  strops.o (libc_rv32imac_balanced.a)
+  svm                        0x80004E86       1 554      2  Code  Gb  pwm.c.o
+  swi_isr                    0x80008606           4      2  Code  Wk  trap.c.o
+  sync_start                 0x80004802          26      2  Code  Lc  pwm.c.o
+  synt_enable_counter        0x800046FE          34      2  Code  Lc  pwm.c.o
+  synt_reset_counter         0x80004720          34      2  Code  Lc  pwm.c.o
+  synt_set_comparator        0x80004742          50      2  Code  Lc  pwm.c.o
+  synt_set_reload            0x80004774          18      2  Code  Lc  pwm.c.o
+  syscall_handler            0x800055C8          18      2  Code  Wk  trap.c.o
+  sysctl_clock_set_preset    0x80005D0A          42      2  Code  Lc  board.c.o
+  sysctl_clock_target_is_busy
+                             0x8000865E          40      2  Code  Lc  hpm_sysctl_drv.c.o
+  sysctl_config_clock        0x8000565A         150      2  Code  Gb  hpm_sysctl_drv.c.o
+  sysctl_enable_group_resource
+                             0x80008686         200      2  Code  Gb  hpm_sysctl_drv.c.o
+  sysctl_resource_target_is_busy
+                             0x80005630          42      2  Code  Lc  hpm_sysctl_drv.c.o
+  system_init                0x800055DA          90      2  Code  Wk  system.c.o
+  trgm_output_config         0x800043D4          86      2  Code  Lc  pwm.c.o
+  uart_calculate_baudrate    0x80008F66         624      2  Code  Lc  hpm_uart_drv.c.o
+  uart_default_config        0x80008ED2         148      2  Code  Gb  hpm_uart_drv.c.o
+  uart_disable_irq           0x80008E9E          28      2  Code  Lc  hpm_uart_drv.c.o
+  uart_enable_irq            0x80008EBA          24      2  Code  Lc  hpm_uart_drv.c.o
+  uart_flush                 0x800091CA          64      2  Code  Gb  hpm_uart_drv.c.o
+  uart_init                  0x80005E82         482      2  Code  Gb  hpm_uart_drv.c.o
+  uart_init_rxline_idle_detection
+                             0x8000920A         104      2  Code  Gb  hpm_uart_drv.c.o
+  uart_init_txline_idle_detection
+                             0x8000609C         126      2  Code  Gb  hpm_uart_drv.c.o
+  uart_modem_config          0x80008E62          60      2  Code  Lc  hpm_uart_drv.c.o
+  uart_send_byte             0x8000604E          78      2  Code  Gb  hpm_uart_drv.c.o
+  vfprintf                   0x8000706C          50      2  Code  Wk  prinops.o (libc_rv32imac_balanced.a)
+  vfprintf_l                 0x80007094         130      2  Code  Wk  prinops.o (libc_rv32imac_balanced.a)
+  write_pma_addr             0x80006294         170      2  Code  Gb  hpm_pmp_drv.c.o
+  write_pma_cfg              0x800092C2          92      2  Code  Gb  hpm_pmp_drv.c.o
+  write_pmp_addr             0x80006180         170      2  Code  Gb  hpm_pmp_drv.c.o
+  write_pmp_cfg              0x80009266          92      2  Code  Gb  hpm_pmp_drv.c.o
+
+Function symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x80003000  _start                            142      2  Code  Gb  startup.s.o
+  0x80003040  __SEGGER_init_done                         2  Code  Gb  startup.s.o
+  0x80003054  start                                      2  Code  Gb  startup.s.o
+  0x8000305A  exit                                2      2  Code  Gb  startup.s.o
+  0x80003066  __SEGGER_RTL_SIGNAL_SIG_DFL
+                                                  2      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  0x80003F06  core_local_mem_to_sys_address
+                                                 18      2  Code  Lc  pwm.c.o
+  0x800043D4  trgm_output_config                 86      2  Code  Lc  pwm.c.o
+  0x8000442A  pwmv2_shadow_register_unlock
+                                                 22      2  Code  Lc  pwm.c.o
+  0x80004440  pwmv2_channel_enable_output
+                                                 50      2  Code  Lc  pwm.c.o
+  0x80004472  pwmv2_set_fault_mode               78      2  Code  Lc  pwm.c.o
+  0x800044C0  pwmv2_set_trigout_cmp_index
+                                                 70      2  Code  Lc  pwm.c.o
+  0x80004506  pwmv2_enable_shadow_lock_feature
+                                                 26      2  Code  Lc  pwm.c.o
+  0x80004520  pwmv2_reload_select_input_trigger
+                                                 78      2  Code  Lc  pwm.c.o
+  0x8000456E  pwmv2_counter_select_data_offset_from_shadow_value
+                                                 70      2  Code  Lc  pwm.c.o
+  0x800045B4  pwmv2_counter_burst_disable
+                                                 54      2  Code  Lc  pwm.c.o
+  0x800045EA  pwmv2_start_pwm_output             50      2  Code  Lc  pwm.c.o
+  0x8000461C  pwmv2_enable_counter               42      2  Code  Lc  pwm.c.o
+  0x80004646  pwmv2_select_cmp_source            94      2  Code  Lc  pwm.c.o
+  0x800046A4  adc16_init_pmt_dma                 22      2  Code  Lc  pwm.c.o
+  0x800046BA  gpio_toggle_pin                    42      2  Code  Lc  pwm.c.o
+  0x800046E4  gpio_get_port_interrupt_flags
+                                                 26      2  Code  Lc  pwm.c.o
+  0x800046FE  synt_enable_counter                34      2  Code  Lc  pwm.c.o
+  0x80004720  synt_reset_counter                 34      2  Code  Lc  pwm.c.o
+  0x80004742  synt_set_comparator                50      2  Code  Lc  pwm.c.o
+  0x80004774  synt_set_reload                    18      2  Code  Lc  pwm.c.o
+  0x80004786  pwm_fault_async                   166      2  Code  Gb  pwm.c.o
+  0x80004802  sync_start                         26      2  Code  Lc  pwm.c.o
+  0x80004816  init_start_trgm_connect           126      2  Code  Lc  pwm.c.o
+  0x80004882  pwm_sync_three_submodules_handware_config
+                                              1 010      2  Code  Lc  pwm.c.o
+  0x80004B48  init_trigger_mux                   62      2  Code  Gb  pwm.c.o
+  0x80004B80  init_common_config                286      2  Code  Gb  pwm.c.o
+  0x80004C8E  init_preemption_config            166      2  Code  Gb  pwm.c.o
+  0x80004D14  sin_f32                           326      2  Code  Gb  pwm.c.o
+  0x80004E12  inverse_park                      150      2  Code  Gb  pwm.c.o
+  0x80004E86  svm                             1 554      2  Code  Gb  pwm.c.o
+  0x8000530C  FOC_voltage                       662      2  Code  Gb  pwm.c.o
+  0x8000551E  _clean_up                         170      2  Code  Wk  reset.c.o
+  0x800055C8  syscall_handler                    18      2  Code  Wk  trap.c.o
+  0x800055DA  system_init                        90      2  Code  Wk  system.c.o
+  0x80005630  sysctl_resource_target_is_busy
+                                                 42      2  Code  Lc  hpm_sysctl_drv.c.o
+  0x8000565A  sysctl_config_clock               150      2  Code  Gb  hpm_sysctl_drv.c.o
+  0x800056E8  hpm_csr_get_core_cycle            122      2  Code  Lc  hpm_clock_drv.c.o
+  0x80005762  clock_get_frequency               230      2  Code  Gb  hpm_clock_drv.c.o
+  0x8000580E  get_frequency_for_source          206      2  Code  Gb  hpm_clock_drv.c.o
+  0x800058BC  get_frequency_for_ip_in_common_group
+                                                114      2  Code  Lc  hpm_clock_drv.c.o
+  0x80005928  clock_get_source                  298      2  Code  Gb  hpm_clock_drv.c.o
+  0x80005A4A  clock_set_adc_source              142      2  Code  Gb  hpm_clock_drv.c.o
+  0x80005AD8  clock_set_source_divider          206      2  Code  Gb  hpm_clock_drv.c.o
+  0x80005B9C  clock_add_to_group                 62      2  Code  Gb  hpm_clock_drv.c.o
+  0x80005BD6  clock_cpu_delay_ms                162      2  Code  Gb  hpm_clock_drv.c.o
+  0x80005C68  l1c_dc_enable                      58      2  Code  Gb  hpm_l1c_drv.c.o
+  0x80005C9C  l1c_ic_enable                      46      2  Code  Gb  hpm_l1c_drv.c.o
+  0x80005CCA  l1c_dc_enable_writearound          10      2  Code  Gb  hpm_l1c_drv.c.o
+  0x80005CD4  init_gpio_pins                     54      2  Code  Gb  pinmux.c.o
+  0x80005D0A  sysctl_clock_set_preset            42      2  Code  Lc  board.c.o
+  0x80005D34  pllctlv2_xtal_set_rampup_time
+                                                 38      2  Code  Lc  board.c.o
+  0x80005D5A  board_init_console                 98      2  Code  Gb  board.c.o
+  0x80005DA8  board_print_banner                 70      2  Code  Gb  board.c.o
+  0x80005DDE  board_get_led_gpio_off_level
+                                                  6      2  Code  Gb  board.c.o
+  0x80005DE4  board_init_adc_clock              206      2  Code  Gb  board.c.o
+  0x80005E82  uart_init                         482      2  Code  Gb  hpm_uart_drv.c.o
+  0x8000604E  uart_send_byte                     78      2  Code  Gb  hpm_uart_drv.c.o
+  0x8000609C  uart_init_txline_idle_detection
+                                                126      2  Code  Gb  hpm_uart_drv.c.o
+  0x80006112  read_pmp_cfg                      110      2  Code  Gb  hpm_pmp_drv.c.o
+  0x80006180  write_pmp_addr                    170      2  Code  Gb  hpm_pmp_drv.c.o
+  0x80006226  read_pma_cfg                      110      2  Code  Gb  hpm_pmp_drv.c.o
+  0x80006294  write_pma_addr                    170      2  Code  Gb  hpm_pmp_drv.c.o
+  0x8000633A  gpio_config_pin_interrupt         326      2  Code  Gb  hpm_gpio_drv.c.o
+  0x80006480  gpio_set_pin_output_with_initial
+                                                110      2  Code  Gb  hpm_gpio_drv.c.o
+  0x800064EE  pwmv2_config_async_fault_source
+                                                 90      2  Code  Gb  hpm_pwmv2_drv.c.o
+  0x80006548  pllctlv2_pll_is_stable             70      2  Code  Lc  hpm_pllctlv2_drv.c.o
+  0x8000658E  pllctlv2_init_pll_with_freq
+                                                198      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  0x8000664E  adc16_get_default_config           58      2  Code  Gb  hpm_adc16_drv.c.o
+  0x80006688  pcfg_dcdc_switch_to_dcm_mode
+                                                222      2  Code  Gb  hpm_pcfg_drv.c.o
+  0x80006762  __SEGGER_RTL_xtoa                 106      2  Code  Lc  convops.o (libc_rv32imac_balanced.a)
+  0x800067CC  __SEGGER_RTL_X_assert             114      2  Code  Wk  execops.o (libc_rv32imac_balanced.a)
+  0x8000681A  __SEGGER_RTL_SIGNAL_SIG_ERR
+                                                  2      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  0x8000681C  __SEGGER_RTL_SIGNAL_SIG_IGN
+                                                  2      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  0x8000681E  __subsf3                           14      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006826  __addsf3                          430      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x800069D4  __ltsf2                            58      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006A0E  __lesf2                            54      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006A44  __gtsf2                            50      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006A76  __gesf2                            62      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006AB4  __fixsfsi                          74      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006AFE  __fixunssfsi                       50      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006B30  __floatsisf                       102      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006B96  __floatunsisf                      86      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006BEC  __floatundisf                     170      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006C96  __truncdfsf2                      134      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006D1C  frexpf                             46      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  0x80006D4A  sqrtf                             302      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  0x80006E2E  abs                                10      2  Code  Wk  intops.o (libc_rv32imac_balanced.a)
+  0x80006E38  memcpy                            134      2  Code  Gb  strasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80006EBE  strnlen                           158      2  Code  Wk  strops.o (libc_rv32imac_balanced.a)
+  0x80006F5C  __SEGGER_RTL_putc                 166      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  0x80006FFC  __SEGGER_RTL_prin_flush            34      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  0x8000701E  __SEGGER_RTL_print_padding
+                                                 58      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  0x80007052  __SEGGER_RTL_pre_padding           38      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  0x8000706C  vfprintf                           50      2  Code  Wk  prinops.o (libc_rv32imac_balanced.a)
+  0x80007094  vfprintf_l                        130      2  Code  Wk  prinops.o (libc_rv32imac_balanced.a)
+  0x80007100  __SEGGER_RTL_stream_write          14      2  Code  Lc  prinops.o (libc_rv32imac_balanced.a)
+  0x8000710A  printf                             50      2  Code  Wk  prinops.o (libc_rv32imac_balanced.a)
+  0x80007136  __SEGGER_RTL_vfprintf_short_float_long
+                                              4 010      2  Code  Gb  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  0x80007136  __SEGGER_RTL_vfprintf           4 010      2  Code  Gb  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  0x80007F4C  __SEGGER_init_heap                 26      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  0x80007F60  __SEGGER_RTL_init_heap             22      2  Code  Wk  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  0x80007F76  __SEGGER_RTL_ascii_toupper
+                                                 18      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x80007F88  __SEGGER_RTL_ascii_tolower
+                                                 14      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x80007F96  __SEGGER_RTL_ascii_towupper
+                                                 18      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x80007FA8  __SEGGER_RTL_ascii_towlower
+                                                 14      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x80007FB6  pwmv2_shadow_register_lock
+                                                 24      2  Code  Lc  pwm.c.o
+  0x80007FCE  pwmv2_set_shadow_val               64      2  Code  Lc  pwm.c.o
+  0x8000800E  pwmv2_disable_four_cmp             52      2  Code  Lc  pwm.c.o
+  0x80008042  pwmv2_enable_async_fault           48      2  Code  Lc  pwm.c.o
+  0x80008072  pwmv2_enable_output_invert
+                                                 48      2  Code  Lc  pwm.c.o
+  0x800080A2  pwmv2_channel_disable_output
+                                                 52      2  Code  Lc  pwm.c.o
+  0x800080D6  pwmv2_set_reload_update_time
+                                                 72      2  Code  Lc  pwm.c.o
+  0x8000811E  pwmv2_reset_counter                52      2  Code  Lc  pwm.c.o
+  0x80008152  adc16_get_status_flags             20      2  Code  Lc  pwm.c.o
+  0x80008166  adc16_clear_status_flags           24      2  Code  Lc  pwm.c.o
+  0x8000817E  adc16_enable_interrupts            36      2  Code  Lc  pwm.c.o
+  0x800081A2  gpio_set_pin_input                 44      2  Code  Lc  pwm.c.o
+  0x800081CE  gpio_clear_pin_interrupt_flag
+                                                 44      2  Code  Lc  pwm.c.o
+  0x800081FA  gpio_enable_pin_interrupt          44      2  Code  Lc  pwm.c.o
+  0x80008226  init_synt_timebase                124      2  Code  Lc  pwm.c.o
+  0x8000828E  pwm_start_same_time                48      2  Code  Gb  pwm.c.o
+  0x800082AE  init_trigger_target               144      2  Code  Gb  pwm.c.o
+  0x80008336  gpio_input_interrupt              252      2  Code  Gb  pwm.c.o
+  0x80008412  main                              308      2  Code  Gb  pwm.c.o
+  0x800084DC  cos_f32                           348      2  Code  Gb  pwm.c.o
+  0x800085E8  reset_handler                      32      2  Code  Wk  reset.c.o
+  0x800085FE  _init                               4      2  Code  Wk  reset.c.o
+  0x80008602  mchtmr_isr                          4      2  Code  Wk  trap.c.o
+  0x80008606  swi_isr                             4      2  Code  Wk  trap.c.o
+  0x8000860A  exception_handler                  44      2  Code  Wk  trap.c.o
+  0x80008632  enable_plic_feature                44      2  Code  Gb  system.c.o
+  0x8000865E  sysctl_clock_target_is_busy
+                                                 40      2  Code  Lc  hpm_sysctl_drv.c.o
+  0x80008686  sysctl_enable_group_resource
+                                                200      2  Code  Gb  hpm_sysctl_drv.c.o
+  0x8000874A  get_frequency_for_adc             156      2  Code  Lc  hpm_clock_drv.c.o
+  0x800087DE  get_frequency_for_ewdg             60      2  Code  Lc  hpm_clock_drv.c.o
+  0x80008812  get_frequency_for_pewdg            40      2  Code  Lc  hpm_clock_drv.c.o
+  0x8000883A  clock_connect_group_to_cpu
+                                                 44      2  Code  Gb  hpm_clock_drv.c.o
+  0x80008866  clock_get_core_clock_ticks_per_ms
+                                                 56      2  Code  Gb  hpm_clock_drv.c.o
+  0x80008898  clock_update_core_clock            32      2  Code  Gb  hpm_clock_drv.c.o
+  0x800088B4  l1c_dc_invalidate_all              24      2  Code  Gb  hpm_l1c_drv.c.o
+  0x800088CC  init_uart_pins                     68      2  Code  Gb  pinmux.c.o
+  0x80008910  init_pwm_pins                      80      2  Code  Gb  pinmux.c.o
+  0x80008960  init_adc16_pins                    40      2  Code  Gb  pinmux.c.o
+  0x80008988  gptmr_check_status                 36      2  Code  Lc  board.c.o
+  0x800089AC  gptmr_clear_status                 20      2  Code  Lc  board.c.o
+  0x800089C0  gpio_set_pin_input                 44      2  Code  Lc  board.c.o
+  0x800089EC  board_print_clock_freq            328      2  Code  Gb  board.c.o
+  0x80008ABC  board_init                         52      2  Code  Gb  board.c.o
+  0x80008AD6  board_delay_ms                     24      2  Code  Gb  board.c.o
+  0x80008AEA  board_init_gpio_pins               80      2  Code  Gb  board.c.o
+  0x80008B22  board_init_pmp                    396      2  Code  Gb  board.c.o
+  0x80008C8C  board_init_clock                  600      2  Code  Gb  board.c.o
+  0x80008E54  board_init_adc16_pins              20      2  Code  Gb  board.c.o
+  0x80008E62  uart_modem_config                  60      2  Code  Lc  hpm_uart_drv.c.o
+  0x80008E9E  uart_disable_irq                   28      2  Code  Lc  hpm_uart_drv.c.o
+  0x80008EBA  uart_enable_irq                    24      2  Code  Lc  hpm_uart_drv.c.o
+  0x80008ED2  uart_default_config               148      2  Code  Gb  hpm_uart_drv.c.o
+  0x80008F66  uart_calculate_baudrate           624      2  Code  Lc  hpm_uart_drv.c.o
+  0x800091CA  uart_flush                         64      2  Code  Gb  hpm_uart_drv.c.o
+  0x8000920A  uart_init_rxline_idle_detection
+                                                104      2  Code  Gb  hpm_uart_drv.c.o
+  0x80009266  write_pmp_cfg                      92      2  Code  Gb  hpm_pmp_drv.c.o
+  0x800092C2  write_pma_cfg                      92      2  Code  Gb  hpm_pmp_drv.c.o
+  0x8000931E  pmp_config                        284      2  Code  Gb  hpm_pmp_drv.c.o
+  0x8000941E  pllctlv2_pll_clk_is_stable
+                                                 88      2  Code  Lc  hpm_pllctlv2_drv.c.o
+  0x80009476  pllctlv2_set_postdiv              148      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  0x80009504  pllctlv2_get_pll_freq_in_hz
+                                                344      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  0x80009650  pllctlv2_get_pll_postdiv_freq_in_hz
+                                                152      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  0x800096E2  adc16_get_channel_default_config
+                                                 48      2  Code  Gb  hpm_adc16_drv.c.o
+  0x80009712  adc16_do_calibration              844      2  Code  Lc  hpm_adc16_drv.c.o
+  0x80009A5A  adc16_init                        332      2  Code  Gb  hpm_adc16_drv.c.o
+  0x80009BA0  adc16_init_channel                172      2  Code  Gb  hpm_adc16_drv.c.o
+  0x80009C4C  adc16_set_pmt_config              176      2  Code  Gb  hpm_adc16_drv.c.o
+  0x80009CFC  adc16_enable_pmt_queue             60      2  Code  Gb  hpm_adc16_drv.c.o
+  0x80009D38  pcfg_dcdc_set_voltage              72      2  Code  Gb  hpm_pcfg_drv.c.o
+  0x80009D80  console_init                      160      2  Code  Gb  hpm_debug_console.c.o
+  0x80009E0C  __SEGGER_RTL_X_file_write         140      2  Code  Gb  hpm_debug_console.c.o
+  0x80009E8C  __SEGGER_RTL_X_file_stat           12      2  Code  Gb  hpm_debug_console.c.o
+  0x80009E98  __SEGGER_RTL_X_file_bufsize
+                                                 12      2  Code  Gb  hpm_debug_console.c.o
+  0x80009EA4  __riscv_save_12                    48      2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EAC  __riscv_save_9                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EAC  __riscv_save_8                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EAC  __riscv_save_11                            2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EAC  __riscv_save_10                            2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EBA  __riscv_save_7                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EBA  __riscv_save_6                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EBA  __riscv_save_5                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EBA  __riscv_save_4                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009ED4  __riscv_restore_12                 36      2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009ED8  __riscv_restore_11                         2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EDA  __riscv_restore_10                         2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EDC  __riscv_restore_9                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EDE  __riscv_restore_8                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EE2  __riscv_restore_7                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EE4  __riscv_restore_6                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EE6  __riscv_restore_5                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EE8  __riscv_restore_4                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EEC  __riscv_restore_3                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EEE  __riscv_restore_2                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EF0  __riscv_restore_1                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EF2  __riscv_restore_0                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80009EF8  itoa                               48      2  Code  Wk  convops.o (libc_rv32imac_balanced.a)
+  0x80009F24  abort                              16      2  Code  Wk  execops.o (libc_rv32imac_balanced.a)
+  0x80009F2E  raise                              92      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  0x80009F86  __SEGGER_RTL_puts_no_nl            48      2  Code  Lc  execops.o (libc_rv32imac_balanced.a)
+  0x80009FAC  fwrite                             76      2  Code  Wk  fileops.o (libc_rv32imac_balanced.a)
+  0x80009FEC  setvbuf                             4      2  Code  Wk  fileops.o (libc_rv32imac_balanced.a)
+  0x80009FF0  __mulsf3                          176      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x8000A0A0  __divsf3                          260      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x8000A1A0  __nesf2                            44      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x8000A1A0  __eqsf2                            44      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x8000A1CC  __fixunssfdi                       96      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x8000A22C  __SEGGER_RTL_ldouble_to_double
+                                                104      2  Code  Lc  floatops.o (libc_rv32imac_balanced.a)
+  0x8000A294  __trunctfsf2                       36      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  0x8000A2AE  __SEGGER_RTL_float32_isnan
+                                                 12      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  0x8000A2BA  __SEGGER_RTL_float32_isinf
+                                                 16      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  0x8000A2CA  __SEGGER_RTL_float32_isnormal
+                                                 24      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  0x8000A2E2  __SEGGER_RTL_float32_signbit
+                                                  4      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  0x8000A2E6  ldexpf                             68      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  0x8000A32A  fmodf                             348      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  0x8000A476  floorf                            104      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  0x8000A4DE  __udivdi3                       1 260      2  Code  Wk  intops.o (libc_rv32imac_balanced.a)
+  0x8000ADCA  memset                            104      2  Code  Gb  strasmops_rv.o (libc_rv32imac_balanced.a)
+  0x8000AE32  strlen                            104      2  Code  Gb  strasmops_rv.o (libc_rv32imac_balanced.a)
+  0x8000AE9A  __SEGGER_RTL_pow10f               104      2  Code  Gb  utilops.o (libc_rv32imac_balanced.a)
+  0x8000AEF6  __SEGGER_RTL_current_locale
+                                                 28      2  Code  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000AF12  __SEGGER_RTL_ascii_mbtowc          44      2  Code  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000AF3E  __SEGGER_RTL_ascii_wctomb          20      2  Code  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000AF52  __SEGGER_RTL_ascii_isctype
+                                                 44      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000AF7E  __SEGGER_RTL_ascii_iswctype
+                                                 44      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B9C4  __SEGGER_init_zero                 20      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  0x8000B9D8  __SEGGER_init_copy                 28      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+
+Function symbols by descending size:
+
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  __SEGGER_RTL_vfprintf           4 010      2  Code  Gb  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_vfprintf_short_float_long
+                                  4 010      2  Code  Gb  __SEGGER_RTL_vfprintf_short_float_long.o (libc_rv32imac_balanced.a)
+  svm                             1 554      2  Code  Gb  pwm.c.o
+  __udivdi3                       1 260      2  Code  Wk  intops.o (libc_rv32imac_balanced.a)
+  pwm_sync_three_submodules_handware_config
+                                  1 010      2  Code  Lc  pwm.c.o
+  adc16_do_calibration              844      2  Code  Lc  hpm_adc16_drv.c.o
+  FOC_voltage                       662      2  Code  Gb  pwm.c.o
+  uart_calculate_baudrate           624      2  Code  Lc  hpm_uart_drv.c.o
+  board_init_clock                  600      2  Code  Gb  board.c.o
+  uart_init                         482      2  Code  Gb  hpm_uart_drv.c.o
+  __addsf3                          430      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  board_init_pmp                    396      2  Code  Gb  board.c.o
+  cos_f32                           348      2  Code  Gb  pwm.c.o
+  fmodf                             348      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  pllctlv2_get_pll_freq_in_hz
+                                    344      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  adc16_init                        332      2  Code  Gb  hpm_adc16_drv.c.o
+  board_print_clock_freq            328      2  Code  Gb  board.c.o
+  gpio_config_pin_interrupt         326      2  Code  Gb  hpm_gpio_drv.c.o
+  sin_f32                           326      2  Code  Gb  pwm.c.o
+  main                              308      2  Code  Gb  pwm.c.o
+  sqrtf                             302      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  clock_get_source                  298      2  Code  Gb  hpm_clock_drv.c.o
+  init_common_config                286      2  Code  Gb  pwm.c.o
+  pmp_config                        284      2  Code  Gb  hpm_pmp_drv.c.o
+  __divsf3                          260      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  gpio_input_interrupt              252      2  Code  Gb  pwm.c.o
+  clock_get_frequency               230      2  Code  Gb  hpm_clock_drv.c.o
+  pcfg_dcdc_switch_to_dcm_mode
+                                    222      2  Code  Gb  hpm_pcfg_drv.c.o
+  board_init_adc_clock              206      2  Code  Gb  board.c.o
+  clock_set_source_divider          206      2  Code  Gb  hpm_clock_drv.c.o
+  get_frequency_for_source          206      2  Code  Gb  hpm_clock_drv.c.o
+  sysctl_enable_group_resource
+                                    200      2  Code  Gb  hpm_sysctl_drv.c.o
+  pllctlv2_init_pll_with_freq
+                                    198      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  __mulsf3                          176      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  adc16_set_pmt_config              176      2  Code  Gb  hpm_adc16_drv.c.o
+  adc16_init_channel                172      2  Code  Gb  hpm_adc16_drv.c.o
+  __floatundisf                     170      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  _clean_up                         170      2  Code  Wk  reset.c.o
+  write_pma_addr                    170      2  Code  Gb  hpm_pmp_drv.c.o
+  write_pmp_addr                    170      2  Code  Gb  hpm_pmp_drv.c.o
+  __SEGGER_RTL_putc                 166      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  init_preemption_config            166      2  Code  Gb  pwm.c.o
+  pwm_fault_async                   166      2  Code  Gb  pwm.c.o
+  clock_cpu_delay_ms                162      2  Code  Gb  hpm_clock_drv.c.o
+  console_init                      160      2  Code  Gb  hpm_debug_console.c.o
+  strnlen                           158      2  Code  Wk  strops.o (libc_rv32imac_balanced.a)
+  get_frequency_for_adc             156      2  Code  Lc  hpm_clock_drv.c.o
+  pllctlv2_get_pll_postdiv_freq_in_hz
+                                    152      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  inverse_park                      150      2  Code  Gb  pwm.c.o
+  sysctl_config_clock               150      2  Code  Gb  hpm_sysctl_drv.c.o
+  pllctlv2_set_postdiv              148      2  Code  Gb  hpm_pllctlv2_drv.c.o
+  uart_default_config               148      2  Code  Gb  hpm_uart_drv.c.o
+  init_trigger_target               144      2  Code  Gb  pwm.c.o
+  _start                            142      2  Code  Gb  startup.s.o
+  clock_set_adc_source              142      2  Code  Gb  hpm_clock_drv.c.o
+  __SEGGER_RTL_X_file_write         140      2  Code  Gb  hpm_debug_console.c.o
+  __truncdfsf2                      134      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  memcpy                            134      2  Code  Gb  strasmops_rv.o (libc_rv32imac_balanced.a)
+  vfprintf_l                        130      2  Code  Wk  prinops.o (libc_rv32imac_balanced.a)
+  init_start_trgm_connect           126      2  Code  Lc  pwm.c.o
+  uart_init_txline_idle_detection
+                                    126      2  Code  Gb  hpm_uart_drv.c.o
+  init_synt_timebase                124      2  Code  Lc  pwm.c.o
+  hpm_csr_get_core_cycle            122      2  Code  Lc  hpm_clock_drv.c.o
+  __SEGGER_RTL_X_assert             114      2  Code  Wk  execops.o (libc_rv32imac_balanced.a)
+  get_frequency_for_ip_in_common_group
+                                    114      2  Code  Lc  hpm_clock_drv.c.o
+  gpio_set_pin_output_with_initial
+                                    110      2  Code  Gb  hpm_gpio_drv.c.o
+  read_pma_cfg                      110      2  Code  Gb  hpm_pmp_drv.c.o
+  read_pmp_cfg                      110      2  Code  Gb  hpm_pmp_drv.c.o
+  __SEGGER_RTL_xtoa                 106      2  Code  Lc  convops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_ldouble_to_double
+                                    104      2  Code  Lc  floatops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_pow10f               104      2  Code  Gb  utilops.o (libc_rv32imac_balanced.a)
+  floorf                            104      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  memset                            104      2  Code  Gb  strasmops_rv.o (libc_rv32imac_balanced.a)
+  strlen                            104      2  Code  Gb  strasmops_rv.o (libc_rv32imac_balanced.a)
+  uart_init_rxline_idle_detection
+                                    104      2  Code  Gb  hpm_uart_drv.c.o
+  __floatsisf                       102      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  board_init_console                 98      2  Code  Gb  board.c.o
+  __fixunssfdi                       96      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  pwmv2_select_cmp_source            94      2  Code  Lc  pwm.c.o
+  raise                              92      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  write_pma_cfg                      92      2  Code  Gb  hpm_pmp_drv.c.o
+  write_pmp_cfg                      92      2  Code  Gb  hpm_pmp_drv.c.o
+  pwmv2_config_async_fault_source
+                                     90      2  Code  Gb  hpm_pwmv2_drv.c.o
+  system_init                        90      2  Code  Wk  system.c.o
+  pllctlv2_pll_clk_is_stable
+                                     88      2  Code  Lc  hpm_pllctlv2_drv.c.o
+  __floatunsisf                      86      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  trgm_output_config                 86      2  Code  Lc  pwm.c.o
+  board_init_gpio_pins               80      2  Code  Gb  board.c.o
+  init_pwm_pins                      80      2  Code  Gb  pinmux.c.o
+  pwmv2_reload_select_input_trigger
+                                     78      2  Code  Lc  pwm.c.o
+  pwmv2_set_fault_mode               78      2  Code  Lc  pwm.c.o
+  uart_send_byte                     78      2  Code  Gb  hpm_uart_drv.c.o
+  fwrite                             76      2  Code  Wk  fileops.o (libc_rv32imac_balanced.a)
+  __fixsfsi                          74      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  pcfg_dcdc_set_voltage              72      2  Code  Gb  hpm_pcfg_drv.c.o
+  pwmv2_set_reload_update_time
+                                     72      2  Code  Lc  pwm.c.o
+  board_print_banner                 70      2  Code  Gb  board.c.o
+  pllctlv2_pll_is_stable             70      2  Code  Lc  hpm_pllctlv2_drv.c.o
+  pwmv2_counter_select_data_offset_from_shadow_value
+                                     70      2  Code  Lc  pwm.c.o
+  pwmv2_set_trigout_cmp_index
+                                     70      2  Code  Lc  pwm.c.o
+  init_uart_pins                     68      2  Code  Gb  pinmux.c.o
+  ldexpf                             68      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  pwmv2_set_shadow_val               64      2  Code  Lc  pwm.c.o
+  uart_flush                         64      2  Code  Gb  hpm_uart_drv.c.o
+  __gesf2                            62      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  clock_add_to_group                 62      2  Code  Gb  hpm_clock_drv.c.o
+  init_trigger_mux                   62      2  Code  Gb  pwm.c.o
+  adc16_enable_pmt_queue             60      2  Code  Gb  hpm_adc16_drv.c.o
+  get_frequency_for_ewdg             60      2  Code  Lc  hpm_clock_drv.c.o
+  uart_modem_config                  60      2  Code  Lc  hpm_uart_drv.c.o
+  __SEGGER_RTL_print_padding
+                                     58      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  __ltsf2                            58      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  adc16_get_default_config           58      2  Code  Gb  hpm_adc16_drv.c.o
+  l1c_dc_enable                      58      2  Code  Gb  hpm_l1c_drv.c.o
+  clock_get_core_clock_ticks_per_ms
+                                     56      2  Code  Gb  hpm_clock_drv.c.o
+  __lesf2                            54      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  init_gpio_pins                     54      2  Code  Gb  pinmux.c.o
+  pwmv2_counter_burst_disable
+                                     54      2  Code  Lc  pwm.c.o
+  board_init                         52      2  Code  Gb  board.c.o
+  pwmv2_channel_disable_output
+                                     52      2  Code  Lc  pwm.c.o
+  pwmv2_disable_four_cmp             52      2  Code  Lc  pwm.c.o
+  pwmv2_reset_counter                52      2  Code  Lc  pwm.c.o
+  __fixunssfsi                       50      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __gtsf2                            50      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  printf                             50      2  Code  Wk  prinops.o (libc_rv32imac_balanced.a)
+  pwmv2_channel_enable_output
+                                     50      2  Code  Lc  pwm.c.o
+  pwmv2_start_pwm_output             50      2  Code  Lc  pwm.c.o
+  synt_set_comparator                50      2  Code  Lc  pwm.c.o
+  vfprintf                           50      2  Code  Wk  prinops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_puts_no_nl            48      2  Code  Lc  execops.o (libc_rv32imac_balanced.a)
+  __riscv_save_12                    48      2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  adc16_get_channel_default_config
+                                     48      2  Code  Gb  hpm_adc16_drv.c.o
+  itoa                               48      2  Code  Wk  convops.o (libc_rv32imac_balanced.a)
+  pwm_start_same_time                48      2  Code  Gb  pwm.c.o
+  pwmv2_enable_async_fault           48      2  Code  Lc  pwm.c.o
+  pwmv2_enable_output_invert
+                                     48      2  Code  Lc  pwm.c.o
+  frexpf                             46      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  l1c_ic_enable                      46      2  Code  Gb  hpm_l1c_drv.c.o
+  __SEGGER_RTL_ascii_isctype
+                                     44      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_iswctype
+                                     44      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_mbtowc          44      2  Code  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __eqsf2                            44      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __nesf2                            44      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  clock_connect_group_to_cpu
+                                     44      2  Code  Gb  hpm_clock_drv.c.o
+  enable_plic_feature                44      2  Code  Gb  system.c.o
+  exception_handler                  44      2  Code  Wk  trap.c.o
+  gpio_clear_pin_interrupt_flag
+                                     44      2  Code  Lc  pwm.c.o
+  gpio_enable_pin_interrupt          44      2  Code  Lc  pwm.c.o
+  gpio_set_pin_input                 44      2  Code  Lc  pwm.c.o
+  gpio_set_pin_input                 44      2  Code  Lc  board.c.o
+  gpio_toggle_pin                    42      2  Code  Lc  pwm.c.o
+  pwmv2_enable_counter               42      2  Code  Lc  pwm.c.o
+  sysctl_clock_set_preset            42      2  Code  Lc  board.c.o
+  sysctl_resource_target_is_busy
+                                     42      2  Code  Lc  hpm_sysctl_drv.c.o
+  get_frequency_for_pewdg            40      2  Code  Lc  hpm_clock_drv.c.o
+  init_adc16_pins                    40      2  Code  Gb  pinmux.c.o
+  sysctl_clock_target_is_busy
+                                     40      2  Code  Lc  hpm_sysctl_drv.c.o
+  __SEGGER_RTL_pre_padding           38      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  pllctlv2_xtal_set_rampup_time
+                                     38      2  Code  Lc  board.c.o
+  __riscv_restore_12                 36      2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __trunctfsf2                       36      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  adc16_enable_interrupts            36      2  Code  Lc  pwm.c.o
+  gptmr_check_status                 36      2  Code  Lc  board.c.o
+  __SEGGER_RTL_prin_flush            34      2  Code  Gb  prinops.o (libc_rv32imac_balanced.a)
+  synt_enable_counter                34      2  Code  Lc  pwm.c.o
+  synt_reset_counter                 34      2  Code  Lc  pwm.c.o
+  clock_update_core_clock            32      2  Code  Gb  hpm_clock_drv.c.o
+  reset_handler                      32      2  Code  Wk  reset.c.o
+  __SEGGER_RTL_current_locale
+                                     28      2  Code  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_init_copy                 28      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  uart_disable_irq                   28      2  Code  Lc  hpm_uart_drv.c.o
+  __SEGGER_init_heap                 26      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  gpio_get_port_interrupt_flags
+                                     26      2  Code  Lc  pwm.c.o
+  pwmv2_enable_shadow_lock_feature
+                                     26      2  Code  Lc  pwm.c.o
+  sync_start                         26      2  Code  Lc  pwm.c.o
+  __SEGGER_RTL_float32_isnormal
+                                     24      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  adc16_clear_status_flags           24      2  Code  Lc  pwm.c.o
+  board_delay_ms                     24      2  Code  Gb  board.c.o
+  l1c_dc_invalidate_all              24      2  Code  Gb  hpm_l1c_drv.c.o
+  pwmv2_shadow_register_lock
+                                     24      2  Code  Lc  pwm.c.o
+  uart_enable_irq                    24      2  Code  Lc  hpm_uart_drv.c.o
+  __SEGGER_RTL_init_heap             22      2  Code  Wk  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  adc16_init_pmt_dma                 22      2  Code  Lc  pwm.c.o
+  pwmv2_shadow_register_unlock
+                                     22      2  Code  Lc  pwm.c.o
+  __SEGGER_RTL_ascii_wctomb          20      2  Code  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_init_zero                 20      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  adc16_get_status_flags             20      2  Code  Lc  pwm.c.o
+  board_init_adc16_pins              20      2  Code  Gb  board.c.o
+  gptmr_clear_status                 20      2  Code  Lc  board.c.o
+  __SEGGER_RTL_ascii_toupper
+                                     18      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_towupper
+                                     18      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  core_local_mem_to_sys_address
+                                     18      2  Code  Lc  pwm.c.o
+  synt_set_reload                    18      2  Code  Lc  pwm.c.o
+  syscall_handler                    18      2  Code  Wk  trap.c.o
+  __SEGGER_RTL_float32_isinf
+                                     16      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  abort                              16      2  Code  Wk  execops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_tolower
+                                     14      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_towlower
+                                     14      2  Code  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_stream_write          14      2  Code  Lc  prinops.o (libc_rv32imac_balanced.a)
+  __subsf3                           14      2  Code  Gb  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_X_file_bufsize
+                                     12      2  Code  Gb  hpm_debug_console.c.o
+  __SEGGER_RTL_X_file_stat           12      2  Code  Gb  hpm_debug_console.c.o
+  __SEGGER_RTL_float32_isnan
+                                     12      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  abs                                10      2  Code  Wk  intops.o (libc_rv32imac_balanced.a)
+  l1c_dc_enable_writearound          10      2  Code  Gb  hpm_l1c_drv.c.o
+  board_get_led_gpio_off_level
+                                      6      2  Code  Gb  board.c.o
+  __SEGGER_RTL_float32_signbit
+                                      4      2  Code  Wk  floatops.o (libc_rv32imac_balanced.a)
+  _init                               4      2  Code  Wk  reset.c.o
+  mchtmr_isr                          4      2  Code  Wk  trap.c.o
+  setvbuf                             4      2  Code  Wk  fileops.o (libc_rv32imac_balanced.a)
+  swi_isr                             4      2  Code  Wk  trap.c.o
+  __SEGGER_RTL_SIGNAL_SIG_DFL
+                                      2      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_SIGNAL_SIG_ERR
+                                      2      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_SIGNAL_SIG_IGN
+                                      2      2  Code  Gb  execops.o (libc_rv32imac_balanced.a)
+  exit                                2      2  Code  Gb  startup.s.o
+  __SEGGER_init_done                         2  Code  Gb  startup.s.o
+  __riscv_restore_0                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_1                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_10                         2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_11                         2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_2                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_3                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_4                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_5                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_6                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_7                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_8                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_restore_9                          2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_10                            2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_11                            2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_4                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_5                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_6                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_7                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_8                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  __riscv_save_9                             2  Code  Gb  compilerasmops_rv.o (libc_rv32imac_balanced.a)
+  start                                      2  Code  Gb  startup.s.o
+
+Read-write data symbols by name:
+
+  Symbol name                   Address     Access        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ---------  ----------  -----  ----  --  -----------
+  __SEGGER_RTL_aSigTab       0x01200000                     24      4  Zero  Lc  execops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_heap_globals.0
+                             0x0120004C                      4      4  Zero  Lc  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  __SEGGER_RTL_stdin_file    0x01200048                      4      4  Zero  Lc  hpm_debug_console.c.o
+  __SEGGER_RTL_stdout_file   0x01200044                      4      4  Zero  Lc  hpm_debug_console.c.o
+  dtc_a                      0x01200040                      4      4  Zero  Gb  pwm.c.o
+  dtc_b                      0x0120003C                      4      4  Zero  Gb  pwm.c.o
+  dtc_c                      0x01200038                      4      4  Zero  Gb  pwm.c.o
+  freq                       0x01200034                      4      4  Zero  Gb  pwm.c.o
+  g_alpha                    0x01200030                      4      4  Zero  Gb  pwm.c.o
+  g_beta                     0x0120002C                      4      4  Zero  Gb  pwm.c.o
+  g_console_uart             0x01200028                      4      4  Zero  Lc  hpm_debug_console.c.o
+  hpm_core_clock             0x01200024                      4      4  Zero  Gb  hpm_clock_drv.c.o
+  phase                      0x01200020                      4      4  Zero  Gb  pwm.c.o
+  pmt_buff                   0x01231000                    192      4  None  Gb  pwm.c.o
+  reload                     0x0120001C                      4      4  Zero  Gb  pwm.c.o
+  seq_buff                   0x01230000                  4 096      4  None  Gb  pwm.c.o
+  stdin                      0x01200058                      4      4  Init  Gb  hpm_debug_console.c.o
+  stdout                     0x01200054                      4      4  Init  Gb  hpm_debug_console.c.o
+  timer_cb                   0x01200018                      4      4  Zero  Lc  board.c.o
+  trig_adc_channel           0x0120005C                      3      4  Init  Gb  pwm.c.o
+  trig_complete_flag         0x01200050                      1         Zero  Gb  pwm.c.o
+
+Read-write data symbols by address:
+
+     Address     Access  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  ---------  -------------------------  ----------  -----  ----  --  -----------
+  0x01200000             __SEGGER_RTL_aSigTab               24      4  Zero  Lc  execops.o (libc_rv32imac_balanced.a)
+  0x01200018             timer_cb                            4      4  Zero  Lc  board.c.o
+  0x0120001C             reload                              4      4  Zero  Gb  pwm.c.o
+  0x01200020             phase                               4      4  Zero  Gb  pwm.c.o
+  0x01200024             hpm_core_clock                      4      4  Zero  Gb  hpm_clock_drv.c.o
+  0x01200028             g_console_uart                      4      4  Zero  Lc  hpm_debug_console.c.o
+  0x0120002C             g_beta                              4      4  Zero  Gb  pwm.c.o
+  0x01200030             g_alpha                             4      4  Zero  Gb  pwm.c.o
+  0x01200034             freq                                4      4  Zero  Gb  pwm.c.o
+  0x01200038             dtc_c                               4      4  Zero  Gb  pwm.c.o
+  0x0120003C             dtc_b                               4      4  Zero  Gb  pwm.c.o
+  0x01200040             dtc_a                               4      4  Zero  Gb  pwm.c.o
+  0x01200044             __SEGGER_RTL_stdout_file            4      4  Zero  Lc  hpm_debug_console.c.o
+  0x01200048             __SEGGER_RTL_stdin_file             4      4  Zero  Lc  hpm_debug_console.c.o
+  0x0120004C             __SEGGER_RTL_heap_globals.0
+                                                             4      4  Zero  Lc  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  0x01200050             trig_complete_flag                  1         Zero  Gb  pwm.c.o
+  0x01200054             stdout                              4      4  Init  Gb  hpm_debug_console.c.o
+  0x01200058             stdin                               4      4  Init  Gb  hpm_debug_console.c.o
+  0x0120005C             trig_adc_channel                    3      4  Init  Gb  pwm.c.o
+  0x01230000             seq_buff                        4 096      4  None  Gb  pwm.c.o
+  0x01231000             pmt_buff                          192      4  None  Gb  pwm.c.o
+
+Read-write data symbols by descending size:
+
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  seq_buff                        4 096      4  None  Gb  pwm.c.o
+  pmt_buff                          192      4  None  Gb  pwm.c.o
+  __SEGGER_RTL_aSigTab               24      4  Zero  Lc  execops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_heap_globals.0
+                                      4      4  Zero  Lc  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  __SEGGER_RTL_stdin_file             4      4  Zero  Lc  hpm_debug_console.c.o
+  __SEGGER_RTL_stdout_file            4      4  Zero  Lc  hpm_debug_console.c.o
+  dtc_a                               4      4  Zero  Gb  pwm.c.o
+  dtc_b                               4      4  Zero  Gb  pwm.c.o
+  dtc_c                               4      4  Zero  Gb  pwm.c.o
+  freq                                4      4  Zero  Gb  pwm.c.o
+  g_alpha                             4      4  Zero  Gb  pwm.c.o
+  g_beta                              4      4  Zero  Gb  pwm.c.o
+  g_console_uart                      4      4  Zero  Lc  hpm_debug_console.c.o
+  hpm_core_clock                      4      4  Zero  Gb  hpm_clock_drv.c.o
+  phase                               4      4  Zero  Gb  pwm.c.o
+  reload                              4      4  Zero  Gb  pwm.c.o
+  stdin                               4      4  Init  Gb  hpm_debug_console.c.o
+  stdout                              4      4  Init  Gb  hpm_debug_console.c.o
+  timer_cb                            4      4  Zero  Lc  board.c.o
+  trig_adc_channel                    3      4  Init  Gb  pwm.c.o
+  trig_complete_flag                  1         Zero  Gb  pwm.c.o
+
+Read-only data symbols by name:
+
+  Global base (gp) at 0x80004134
+  Thread base (tp) at 0x01200060
+  
+  Symbol name                   Address     Access        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ---------  ----------  -----  ----  --  -----------
+  __SEGGER_RTL_Moeller_inverse_lut
+                             0x8000A9CA                  1 024      2  Cnst  Lc  intops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_aPower2f      0x80003D90  gp-0x03A4          24      4  Cnst  Lc  utilops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_aSqrtData     0x8000B0F0                    384         Cnst  Lc  floatops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_ctype_map
+                             0x8000B298                    128         Cnst  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_ascii_ctype_mask
+                             0x8000B0CE                     13         Cnst  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_c_locale      0x80003E80  gp-0x02B4          12      4  Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_c_locale_abbrev_day_names
+                             0x8000B07F                     29         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_c_locale_abbrev_month_names
+                             0x8000B09C                     49         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_c_locale_am_pm_indicator
+                             0x8000B001                      7         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_c_locale_data
+                             0x80003EAC  gp-0x0288          88      4  Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_c_locale_date_format
+                             0x8000B06D                      9         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_c_locale_date_time_format
+                             0x8000B008                     15         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_c_locale_day_names
+                             0x8000B01B                     58         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_c_locale_month_names
+                             0x8000AFAA                     87         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_c_locale_time_format
+                             0x8000B076                      9         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_codeset_ascii
+                             0x80003E8C  gp-0x02A8          32      4  Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_data_empty_string
+                             0x8000B0CD                      1         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_data_utf8_period
+                             0x8000B057                      2         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_hex_lc        0x8000B280                     16         Cnst  Gb  prinops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_hex_uc        0x8000B270                     16         Cnst  Gb  prinops.o (libc_rv32imac_balanced.a)
+  __SEGGER_RTL_ipow10        0x80003068                    160      8  Cnst  Gb  prinops.o (libc_rv32imac_balanced.a)
+  __SEGGER_init_data__       0x8000B388                [1 596]      4  Cnst  Lc  [ Linker created ]
+  __SEGGER_init_table__      0x8000B318                  [112]      4  Cnst  Lc  [ Linker created ]
+  fw_info                    0x80001010                    128      4  Cnst  Gb  hpm_bootheader.c.o
+  header                     0x80001000                     16      4  Cnst  Gb  hpm_bootheader.c.o
+  option                     0x80000400                     16      4  Cnst  Gb  board.c.o
+  s_adc_clk_mux_node         0x80003F04  gp-0x0230           2      4  Cnst  Lc  hpm_clock_drv.c.o
+  s_wdgs                     0x80003B30  gp-0x0604           8      4  Cnst  Lc  hpm_clock_drv.c.o
+  sinTable_f32               0x80003108                  2 052      4  Cnst  Lc  pwm.c.o
+
+Read-only data symbols by address:
+
+  Global base (gp) at 0x80004134
+  Thread base (tp) at 0x01200060
+  
+     Address     Access  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  ---------  -------------------------  ----------  -----  ----  --  -----------
+  0x80000400             option                             16      4  Cnst  Gb  board.c.o
+  0x80001000             header                             16      4  Cnst  Gb  hpm_bootheader.c.o
+  0x80001010             fw_info                           128      4  Cnst  Gb  hpm_bootheader.c.o
+  0x80003068             __SEGGER_RTL_ipow10               160      8  Cnst  Gb  prinops.o (libc_rv32imac_balanced.a)
+  0x80003108             sinTable_f32                    2 052      4  Cnst  Lc  pwm.c.o
+  0x80003B30  gp-0x0604  s_wdgs                              8      4  Cnst  Lc  hpm_clock_drv.c.o
+  0x80003D90  gp-0x03A4  __SEGGER_RTL_aPower2f              24      4  Cnst  Lc  utilops.o (libc_rv32imac_balanced.a)
+  0x80003E80  gp-0x02B4  __SEGGER_RTL_c_locale              12      4  Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x80003E8C  gp-0x02A8  __SEGGER_RTL_codeset_ascii
+                                                            32      4  Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x80003EAC  gp-0x0288  __SEGGER_RTL_c_locale_data
+                                                            88      4  Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x80003F04  gp-0x0230  s_adc_clk_mux_node                  2      4  Cnst  Lc  hpm_clock_drv.c.o
+  0x8000A9CA             __SEGGER_RTL_Moeller_inverse_lut
+                                                         1 024      2  Cnst  Lc  intops.o (libc_rv32imac_balanced.a)
+  0x8000AFAA             __SEGGER_RTL_c_locale_month_names
+                                                            87         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B001             __SEGGER_RTL_c_locale_am_pm_indicator
+                                                             7         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B008             __SEGGER_RTL_c_locale_date_time_format
+                                                            15         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B01B             __SEGGER_RTL_c_locale_day_names
+                                                            58         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B057             __SEGGER_RTL_data_utf8_period
+                                                             2         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B06D             __SEGGER_RTL_c_locale_date_format
+                                                             9         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B076             __SEGGER_RTL_c_locale_time_format
+                                                             9         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B07F             __SEGGER_RTL_c_locale_abbrev_day_names
+                                                            29         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B09C             __SEGGER_RTL_c_locale_abbrev_month_names
+                                                            49         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B0CD             __SEGGER_RTL_data_empty_string
+                                                             1         Cnst  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B0CE             __SEGGER_RTL_ascii_ctype_mask
+                                                            13         Cnst  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B0F0             __SEGGER_RTL_aSqrtData            384         Cnst  Lc  floatops.o (libc_rv32imac_balanced.a)
+  0x8000B270             __SEGGER_RTL_hex_uc                16         Cnst  Gb  prinops.o (libc_rv32imac_balanced.a)
+  0x8000B280             __SEGGER_RTL_hex_lc                16         Cnst  Gb  prinops.o (libc_rv32imac_balanced.a)
+  0x8000B298             __SEGGER_RTL_ascii_ctype_map
+                                                           128         Cnst  Lc  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x8000B318             __SEGGER_init_table__           [112]      4  Cnst  Lc  [ Linker created ]
+  0x8000B388             __SEGGER_init_data__          [1 596]      4  Cnst  Lc  [ Linker created ]
+
+Thread-local data symbols by name:
+
+  Global base (gp) at 0x80004134
+  Thread base (tp) at 0x01200060
+  
+  Symbol name                   Address     Access        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ---------  ----------  -----  ----  --  -----------
+  __RAL_global_locale        0x01200064  tp+0x0004          20      4  Init  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_global_locale
+                             0x01200064  tp+0x0004          20      4  Init  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  __SEGGER_RTL_locale_ptr    0x01200060  tp+0x0000           4      4  Zero  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+
+Thread-local data symbols by address:
+
+  Global base (gp) at 0x80004134
+  Thread base (tp) at 0x01200060
+  
+     Address     Access  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  ---------  -------------------------  ----------  -----  ----  --  -----------
+  0x01200060  tp+0x0000  __SEGGER_RTL_locale_ptr             4      4  Zero  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x01200064  tp+0x0004  __SEGGER_RTL_global_locale
+                                                            20      4  Init  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+  0x01200064  tp+0x0004  __RAL_global_locale                20      4  Init  Gb  mbops.o (mbops_timeops_rv32imac_balanced.a)
+
+Untyped symbols by name:
+
+  Global base (gp) at 0x80004134
+  Thread base (tp) at 0x01200060
+  
+  Symbol name                     Value     Access        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ---------  ----------  -----  ----  --  -----------
+  __AHB_SRAM_segment_end__   0xF0208000                                ----  Gb  [ Linker created ]
+  __AHB_SRAM_segment_size__  0x00008000                                ----  Gb  [ Linker created ]
+  __AHB_SRAM_segment_start__
+                             0xF0200000                                ----  Gb  [ Linker created ]
+  __AHB_SRAM_segment_used_end__
+                             0xF0200000                                ----  Gb  [ Linker created ]
+  __AHB_SRAM_segment_used_size__
+                             0x00000000                                ----  Gb  [ Linker created ]
+  __AHB_SRAM_segment_used_start__
+                             0xF0200000                                ----  Gb  [ Linker created ]
+  __AXI_SRAM_segment_end__   0x01230000                                ----  Gb  [ Linker created ]
+  __AXI_SRAM_segment_size__  0x00030000                                ----  Gb  [ Linker created ]
+  __AXI_SRAM_segment_start__
+                             0x01200000                                ----  Gb  [ Linker created ]
+  __AXI_SRAM_segment_used_end__
+                             0x01200078                                ----  Gb  [ Linker created ]
+  __AXI_SRAM_segment_used_size__
+                             0x00000078                                ----  Gb  [ Linker created ]
+  __AXI_SRAM_segment_used_start__
+                             0x01200000                                ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_end__
+                             0x80003000                                ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_size__
+                             0x00002000                                ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_start__
+                             0x80001000                                ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_used_end__
+                             0x80001090                                ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_used_size__
+                             0x00000090                                ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_used_start__
+                             0x80001000                                ----  Gb  [ Linker created ]
+  __DLM_segment_end__        0x00220000                                ----  Gb  [ Linker created ]
+  __DLM_segment_size__       0x00020000                                ----  Gb  [ Linker created ]
+  __DLM_segment_start__      0x00200000                                ----  Gb  [ Linker created ]
+  __DLM_segment_used_end__   0x00220000                                ----  Gb  [ Linker created ]
+  __DLM_segment_used_size__  0x00020000                                ----  Gb  [ Linker created ]
+  __DLM_segment_used_start__
+                             0x00200000                                ----  Gb  [ Linker created ]
+  __FLASH_segment_end__      0x80100000                                ----  Gb  [ Linker created ]
+  __FLASH_segment_size__     0x000FD000                                ----  Gb  [ Linker created ]
+  __FLASH_segment_start__    0x80003000                                ----  Gb  [ Linker created ]
+  __FLASH_segment_used_end__
+                             0x8000B9F4                                ----  Gb  [ Linker created ]
+  __FLASH_segment_used_size__
+                             0x000089F4                                ----  Gb  [ Linker created ]
+  __FLASH_segment_used_start__
+                             0x80003000                                ----  Gb  [ Linker created ]
+  __HEAPSIZE__               0x00004000                                ----  Gb  [ Linker created ]
+  __ILM_segment_end__        0x00020000                                ----  Gb  [ Linker created ]
+  __ILM_segment_size__       0x00020000                                ----  Gb  [ Linker created ]
+  __ILM_segment_start__      0x00000000                                ----  Gb  [ Linker created ]
+  __ILM_segment_used_end__   0x0000061E                                ----  Gb  [ Linker created ]
+  __ILM_segment_used_size__  0x0000061E                                ----  Gb  [ Linker created ]
+  __ILM_segment_used_start__
+                             0x00000000                                ----  Gb  [ Linker created ]
+  __NONCACHEABLE_RAM_segment_end__
+                             0x01240000                                ----  Gb  [ Linker created ]
+  __NONCACHEABLE_RAM_segment_size__
+                             0x00010000                                ----  Gb  [ Linker created ]
+  __NONCACHEABLE_RAM_segment_start__
+                             0x01230000                                ----  Gb  [ Linker created ]
+  __NONCACHEABLE_RAM_segment_used_end__
+                             0x012310C0                                ----  Gb  [ Linker created ]
+  __NONCACHEABLE_RAM_segment_used_size__
+                             0x000010C0                                ----  Gb  [ Linker created ]
+  __NONCACHEABLE_RAM_segment_used_start__
+                             0x01230000                                ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_end__
+                             0x80001000                                ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_size__
+                             0x00000C00                                ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_start__
+                             0x80000400                                ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_used_end__
+                             0x80000410                                ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_used_size__
+                             0x00000010                                ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_used_start__
+                             0x80000400                                ----  Gb  [ Linker created ]
+  __SEGGER_RTL_fdiv_reciprocal_table
+                             0x80003C90  gp-0x04A4         256      4  Cnst  Lc  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  __STACKSIZE__              0x00004000                                ----  Gb  [ Linker created ]
+  __app_load_addr__          0x80003000                                ----  Gb  [ Linker created ]
+  __app_offset__             0x00002000                                ----  Gb  [ Linker created ]
+  __boot_header_length__     0x00000090                                ----  Gb  [ Linker created ]
+  __boot_header_load_addr__  0x80001000                                ----  Gb  [ Linker created ]
+  __fsymtab_end              0x8000B0DB                                ----  Gb  [ Linker created ]
+  __fsymtab_start            0x8000B0DB                                ----  Gb  [ Linker created ]
+  __global_pointer$          0x80004134  gp+0x0000                     ----  Gb  [ Linker created ]
+  __heap_end__               0x00204000                                ----  Gb  [ Linker created ]
+  __heap_start__             0x00200000                                ----  Gb  [ Linker created ]
+  __noncacheable_end__       0x01240000                                ----  Gb  [ Linker created ]
+  __noncacheable_start__     0x01230000                                ----  Gb  [ Linker created ]
+  __nor_cfg_option_load_addr__
+                             0x80000400                                ----  Gb  [ Linker created ]
+  __rt_init_end              0x8000B0DB                                ----  Gb  [ Linker created ]
+  __rt_init_start            0x8000B0DB                                ----  Gb  [ Linker created ]
+  __rtmsymtab_end            0x8000B0DB                                ----  Gb  [ Linker created ]
+  __rtmsymtab_start          0x8000B0DB                                ----  Gb  [ Linker created ]
+  __stack_end__              0x00220000                                ----  Gb  [ Linker created ]
+  __startup_complete         0x80003054                             2  Code  Lc  startup.s.o
+  __thread_pointer$          0x01200060                                ----  Gb  [ Linker created ]
+  __usbh_class_info_end__    0x80003068                                ----  Gb  [ Linker created ]
+  __usbh_class_info_start__  0x80003068                                ----  Gb  [ Linker created ]
+  __vector_table             0x00000000                  [322]    512  Init  Gb  startup.s.o
+  __vsymtab_end              0x8000B0DB                                ----  Gb  [ Linker created ]
+  __vsymtab_start            0x8000B0DB                                ----  Gb  [ Linker created ]
+  _flash_size                0x00100000                                ----  Gb  [ Linker created ]
+  _heap_size                 0x00004000                                ----  Gb  [ Linker created ]
+  _noncacheable_size         0x00010000                                ----  Gb  [ Linker created ]
+  _stack                     0x00220000                                ----  Gb  [ Linker created ]
+  _stack_safe                0x00220000                                ----  Gb  [ Linker created ]
+  _stack_size                0x00004000                                ----  Gb  [ Linker created ]
+  default_irq_handler        0x00000546                             4  Init  Wk  startup.s.o
+  default_irq_s_handler      0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_1              0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_10             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_11             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_12             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_13             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_14             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_15             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_16             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_17             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_18             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_19             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_2              0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_20             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_21             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_22             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_23             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_24             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_25             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_26             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_27             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_28             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_29             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_3              0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_30             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_31             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_32             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_33             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_34             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_35             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_36             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_37             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_38             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_39             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_4              0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_40             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_41             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_42             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_43             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_44             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_45             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_46             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_47             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_48             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_49             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_5              0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_50             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_51             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_52             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_53             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_54             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_55             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_56             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_57             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_58             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_59             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_6              0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_60             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_61             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_62             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_63             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_64             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_65             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_66             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_67             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_68             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_69             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_7              0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_70             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_71             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_72             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_73             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_74             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_75             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_76             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_77             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_78             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_79             0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_8              0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_9              0x00000546                             4  Init  Wk  startup.s.o
+  default_isr_s_1            0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_10           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_11           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_12           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_13           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_14           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_15           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_16           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_17           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_18           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_19           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_2            0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_20           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_21           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_22           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_23           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_24           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_25           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_26           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_27           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_28           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_29           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_3            0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_30           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_31           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_32           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_33           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_34           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_35           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_36           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_37           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_38           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_39           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_4            0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_40           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_41           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_42           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_43           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_44           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_45           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_46           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_47           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_48           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_49           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_5            0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_50           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_51           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_52           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_53           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_54           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_55           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_56           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_57           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_58           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_59           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_6            0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_60           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_61           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_62           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_63           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_64           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_65           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_66           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_67           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_68           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_69           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_7            0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_70           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_71           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_72           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_73           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_74           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_75           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_76           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_77           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_78           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_79           0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_8            0x00000140                           512  Init  Wk  startup.s.o
+  default_isr_s_9            0x00000140                           512  Init  Wk  startup.s.o
+  nmi_handler                0x00000544                    [4]      4  Init  Wk  startup.s.o
+
+Untyped symbols by address:
+
+  Global base (gp) at 0x80004134
+  Thread base (tp) at 0x01200060
+  
+       Value     Access  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  ---------  -------------------------  ----------  -----  ----  --  -----------
+  0x00000000             __vector_table                  [322]    512  Init  Gb  startup.s.o
+  0x00000000             __ILM_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x00000000             __ILM_segment_start__                         ----  Gb  [ Linker created ]
+  0x00000000             __AHB_SRAM_segment_used_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00000010             __NOR_CFG_OPTION_segment_used_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00000078             __AXI_SRAM_segment_used_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00000090             __boot_header_length__                        ----  Gb  [ Linker created ]
+  0x00000090             __BOOT_HEADER_segment_used_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00000140             default_isr_s_9                          512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_8                          512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_79                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_78                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_77                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_76                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_75                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_74                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_73                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_72                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_71                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_70                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_7                          512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_69                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_68                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_67                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_66                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_65                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_64                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_63                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_62                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_61                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_60                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_6                          512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_59                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_58                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_57                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_56                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_55                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_54                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_53                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_52                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_51                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_50                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_5                          512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_49                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_48                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_47                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_46                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_45                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_44                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_43                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_42                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_41                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_40                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_4                          512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_39                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_38                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_37                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_36                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_35                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_34                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_33                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_32                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_31                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_30                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_3                          512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_29                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_28                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_27                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_26                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_25                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_24                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_23                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_22                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_21                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_20                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_2                          512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_19                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_18                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_17                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_16                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_15                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_14                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_13                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_12                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_11                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_10                         512  Init  Wk  startup.s.o
+  0x00000140             default_isr_s_1                          512  Init  Wk  startup.s.o
+  0x00000140             default_irq_s_handler                    512  Init  Wk  startup.s.o
+  0x00000544             nmi_handler                       [4]      4  Init  Wk  startup.s.o
+  0x00000546             default_isr_9                              4  Init  Wk  startup.s.o
+  0x00000546             default_isr_8                              4  Init  Wk  startup.s.o
+  0x00000546             default_isr_79                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_78                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_77                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_76                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_75                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_74                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_73                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_72                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_71                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_70                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_7                              4  Init  Wk  startup.s.o
+  0x00000546             default_isr_69                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_68                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_67                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_66                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_65                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_64                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_63                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_62                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_61                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_60                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_6                              4  Init  Wk  startup.s.o
+  0x00000546             default_isr_59                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_58                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_57                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_56                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_55                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_54                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_53                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_52                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_51                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_50                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_5                              4  Init  Wk  startup.s.o
+  0x00000546             default_isr_49                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_48                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_47                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_46                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_45                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_44                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_43                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_42                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_41                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_40                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_4                              4  Init  Wk  startup.s.o
+  0x00000546             default_isr_39                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_38                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_37                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_36                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_35                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_34                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_33                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_32                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_31                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_30                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_3                              4  Init  Wk  startup.s.o
+  0x00000546             default_isr_29                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_28                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_27                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_26                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_25                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_24                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_23                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_22                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_21                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_20                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_2                              4  Init  Wk  startup.s.o
+  0x00000546             default_isr_19                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_18                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_17                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_16                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_15                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_14                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_13                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_12                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_11                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_10                             4  Init  Wk  startup.s.o
+  0x00000546             default_isr_1                              4  Init  Wk  startup.s.o
+  0x00000546             default_irq_handler                        4  Init  Wk  startup.s.o
+  0x0000061E             __ILM_segment_used_size__                     ----  Gb  [ Linker created ]
+  0x0000061E             __ILM_segment_used_end__                      ----  Gb  [ Linker created ]
+  0x00000C00             __NOR_CFG_OPTION_segment_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x000010C0             __NONCACHEABLE_RAM_segment_used_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00002000             __app_offset__                                ----  Gb  [ Linker created ]
+  0x00002000             __BOOT_HEADER_segment_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00004000             _stack_size                                   ----  Gb  [ Linker created ]
+  0x00004000             _heap_size                                    ----  Gb  [ Linker created ]
+  0x00004000             __STACKSIZE__                                 ----  Gb  [ Linker created ]
+  0x00004000             __HEAPSIZE__                                  ----  Gb  [ Linker created ]
+  0x00008000             __AHB_SRAM_segment_size__                     ----  Gb  [ Linker created ]
+  0x000089F4             __FLASH_segment_used_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00010000             _noncacheable_size                            ----  Gb  [ Linker created ]
+  0x00010000             __NONCACHEABLE_RAM_segment_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00020000             __ILM_segment_size__                          ----  Gb  [ Linker created ]
+  0x00020000             __ILM_segment_end__                           ----  Gb  [ Linker created ]
+  0x00020000             __DLM_segment_used_size__                     ----  Gb  [ Linker created ]
+  0x00020000             __DLM_segment_size__                          ----  Gb  [ Linker created ]
+  0x00030000             __AXI_SRAM_segment_size__                     ----  Gb  [ Linker created ]
+  0x000FD000             __FLASH_segment_size__                        ----  Gb  [ Linker created ]
+  0x00100000             _flash_size                                   ----  Gb  [ Linker created ]
+  0x00200000             __heap_start__                                ----  Gb  [ Linker created ]
+  0x00200000             __DLM_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x00200000             __DLM_segment_start__                         ----  Gb  [ Linker created ]
+  0x00204000             __heap_end__                                  ----  Gb  [ Linker created ]
+  0x00220000             _stack_safe                                   ----  Gb  [ Linker created ]
+  0x00220000             _stack                                        ----  Gb  [ Linker created ]
+  0x00220000             __stack_end__                                 ----  Gb  [ Linker created ]
+  0x00220000             __DLM_segment_used_end__                      ----  Gb  [ Linker created ]
+  0x00220000             __DLM_segment_end__                           ----  Gb  [ Linker created ]
+  0x01200000             __AXI_SRAM_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x01200000             __AXI_SRAM_segment_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x01200060             __thread_pointer$                             ----  Gb  [ Linker created ]
+  0x01200078             __AXI_SRAM_segment_used_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x01230000             __noncacheable_start__                        ----  Gb  [ Linker created ]
+  0x01230000             __NONCACHEABLE_RAM_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x01230000             __NONCACHEABLE_RAM_segment_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x01230000             __AXI_SRAM_segment_end__                      ----  Gb  [ Linker created ]
+  0x012310C0             __NONCACHEABLE_RAM_segment_used_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x01240000             __noncacheable_end__                          ----  Gb  [ Linker created ]
+  0x01240000             __NONCACHEABLE_RAM_segment_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x80000400             __nor_cfg_option_load_addr__
+                                                                       ----  Gb  [ Linker created ]
+  0x80000400             __NOR_CFG_OPTION_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x80000400             __NOR_CFG_OPTION_segment_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x80000410             __NOR_CFG_OPTION_segment_used_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x80001000             __boot_header_load_addr__                     ----  Gb  [ Linker created ]
+  0x80001000             __NOR_CFG_OPTION_segment_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x80001000             __BOOT_HEADER_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x80001000             __BOOT_HEADER_segment_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x80001090             __BOOT_HEADER_segment_used_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x80003000             __app_load_addr__                             ----  Gb  [ Linker created ]
+  0x80003000             __FLASH_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x80003000             __FLASH_segment_start__                       ----  Gb  [ Linker created ]
+  0x80003000             __BOOT_HEADER_segment_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x80003054             __startup_complete                         2  Code  Lc  startup.s.o
+  0x80003068             __usbh_class_info_start__                     ----  Gb  [ Linker created ]
+  0x80003068             __usbh_class_info_end__                       ----  Gb  [ Linker created ]
+  0x80003C90  gp-0x04A4  __SEGGER_RTL_fdiv_reciprocal_table
+                                                           256      4  Cnst  Lc  floatasmops_rv.o (libc_rv32imac_balanced.a)
+  0x80004134  gp+0x0000  __global_pointer$                             ----  Gb  [ Linker created ]
+  0x8000B0DB             __vsymtab_start                               ----  Gb  [ Linker created ]
+  0x8000B0DB             __vsymtab_end                                 ----  Gb  [ Linker created ]
+  0x8000B0DB             __rtmsymtab_start                             ----  Gb  [ Linker created ]
+  0x8000B0DB             __rtmsymtab_end                               ----  Gb  [ Linker created ]
+  0x8000B0DB             __rt_init_start                               ----  Gb  [ Linker created ]
+  0x8000B0DB             __rt_init_end                                 ----  Gb  [ Linker created ]
+  0x8000B0DB             __fsymtab_start                               ----  Gb  [ Linker created ]
+  0x8000B0DB             __fsymtab_end                                 ----  Gb  [ Linker created ]
+  0x8000B9F4             __FLASH_segment_used_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x80100000             __FLASH_segment_end__                         ----  Gb  [ Linker created ]
+  0xF0200000             __AHB_SRAM_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0xF0200000             __AHB_SRAM_segment_used_end__
+                                                                       ----  Gb  [ Linker created ]
+  0xF0200000             __AHB_SRAM_segment_start__
+                                                                       ----  Gb  [ Linker created ]
+  0xF0208000             __AHB_SRAM_segment_end__                      ----  Gb  [ Linker created ]
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                     LINK SUMMARY                                      ***
+***                                                                                         ***
+***********************************************************************************************
+
+Memory breakdown:
+
+   27 992 bytes read-only  code    + 
+    9 045 bytes read-only  data    =  37 037 bytes read-only (total)
+   37 172 bytes read-write data
+
+Region summary:
+
+  Name        Range                     Size                 Used               Unused       Alignment Loss
+  ----------  -----------------  -----------  -------------------  -------------------  -------------------
+  ILM         00000000-0001FFFF      131 072        1 562   1.19%      129 506  98.81%            4   0.00%
+  DLM         00200000-0021FFFF      131 072       32 768  25.00%       98 304  75.00%            0   0.00%
+  AXI_SRAM    01200000-0122FFFF      196 608          116   0.06%      196 491  99.94%            1   0.00%
+  NONCACHEABLE_RAM
+              01230000-0123FFFF       65 536        4 288   6.54%       61 248  93.46%            0   0.00%
+  NOR_CFG_OPTION
+              80000400-80000FFF        3 072           16   0.52%        3 056  99.48%            0   0.00%
+  BOOT_HEADER
+              80001000-80002FFF        8 192          144   1.76%        8 048  98.24%            0   0.00%
+  FLASH       80003000-800FFFFF    1 036 288       35 315   3.41%    1 000 973  96.59%            0   0.00%
+
+Link complete: 0 error.
