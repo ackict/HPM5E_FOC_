@@ -1,0 +1,41 @@
+{
+            "target": {
+                
+        "name": "foc",
+        "sources": "D:/hpm_sdk_custom/samples/drivers/pwmv2/sync_output/src/main.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/toolchains/reset.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/toolchains/trap.c,D:/sdk_env_v1.11.0/hpm_sdk/arch/riscv/l1c/hpm_l1c_drv.c,D:/hpm_sdk_custom/boards/hpm5e31_LuckyCAT/pinmux.c,D:/hpm_sdk_custom/boards/hpm5e31_LuckyCAT/board.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/system.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/hpm_sysctl_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/hpm_clock_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/hpm_otp_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/hpm_pdgo_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/hpm_trgm_soc_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/hpm_qeiv2_soc_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/boot/hpm_bootheader.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_uart_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_i2c_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_pmp_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_gpio_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_spi_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_gptmr_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_pwmv2_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_pllctlv2_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_usb_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_acmp_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_enet_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_adc16_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_pcfg_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_ptpc_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_mchtmr_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_tsns_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_crc_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_sdm_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_mcan_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_qeiv2_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_enc_pos_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_qeov2_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_dmav2_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_ewdg_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_plb_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_tfa_drv.S,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_esc_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_ppi_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_lobs_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_eui_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/drivers/src/hpm_owr_drv.c,D:/sdk_env_v1.11.0/hpm_sdk/utils/hpm_sbrk.c,D:/sdk_env_v1.11.0/hpm_sdk/utils/hpm_swap.c,D:/sdk_env_v1.11.0/hpm_sdk/utils/hpm_ffssi.c,D:/sdk_env_v1.11.0/hpm_sdk/utils/hpm_crc32.c,D:/sdk_env_v1.11.0/hpm_sdk/components/debug_console/hpm_debug_console.c,D:/sdk_env_v1.11.0/hpm_sdk/components/usb/device/hpm_usb_device.c,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/port/hpmicro/usb_glue_hpm.c,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/core/usbotg_core.c,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/core/usbd_core.c,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/port/hpmicro/usb_dc_hpm.c,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/class/cdc/usbd_cdc_acm.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/toolchains/reset.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/toolchains/trap.c,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/toolchains/iar/startup.s",
+        "includes": "D:/sdk_env_v1.11.0/hpm_sdk/arch/.,D:/sdk_env_v1.11.0/hpm_sdk/arch/riscv/l1c/.,D:/sdk_env_v1.11.0/hpm_sdk/arch/riscv/intc/.,D:/hpm_sdk_custom/boards/hpm5e31_LuckyCAT/.,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/ip,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/toolchains,D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/boot,D:/sdk_env_v1.11.0/hpm_sdk/drivers/inc,D:/sdk_env_v1.11.0/hpm_sdk/utils/.,D:/sdk_env_v1.11.0/hpm_sdk/components/debug_console/.,D:/sdk_env_v1.11.0/hpm_sdk/components/usb/device/.,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/common,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/osal,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/core,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/class/cdc,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/class/hid,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/class/midi,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/class/msc,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/class/audio,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/class/video,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/class/hub,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/class/wireless,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/port/ehci,D:/sdk_env_v1.11.0/hpm_sdk/middleware/cherryusb/port/hpmicro,D:/hpm_sdk_custom/samples/drivers/pwmv2/sync_output/hpm5e31_LuckyCAT_flash_xip_debug/build_tmp/generated/include,D:/hpm_sdk_custom/samples/drivers/pwmv2/sync_output/bsp/cherryusb/config",
+        "defines":"FLASH_XIP=1,HPMSOC_HAS_HPMSDK_GPIO=y,HPMSOC_HAS_HPMSDK_TFA=y,HPMSOC_HAS_HPMSDK_PLIC=y,HPMSOC_HAS_HPMSDK_MCHTMR=y,HPMSOC_HAS_HPMSDK_PLICSW=y,HPMSOC_HAS_HPMSDK_GPTMR=y,HPMSOC_HAS_HPMSDK_OWR=y,HPMSOC_HAS_HPMSDK_EUI=y,HPMSOC_HAS_HPMSDK_UART=y,HPMSOC_HAS_HPMSDK_I2C=y,HPMSOC_HAS_HPMSDK_SPI=y,HPMSOC_HAS_HPMSDK_CRC=y,HPMSOC_HAS_HPMSDK_TSNS=y,HPMSOC_HAS_HPMSDK_MBX=y,HPMSOC_HAS_HPMSDK_EWDG=y,HPMSOC_HAS_HPMSDK_DMAMUX=y,HPMSOC_HAS_HPMSDK_DMAV2=y,HPMSOC_HAS_HPMSDK_PPI=y,HPMSOC_HAS_HPMSDK_GPIOM=y,HPMSOC_HAS_HPMSDK_LOBS=y,HPMSOC_HAS_HPMSDK_ADC16=y,HPMSOC_HAS_HPMSDK_ACMP=y,HPMSOC_HAS_HPMSDK_MCAN=y,HPMSOC_HAS_HPMSDK_PTPC=y,HPMSOC_HAS_HPMSDK_QEIV2=y,HPMSOC_HAS_HPMSDK_QEOV2=y,HPMSOC_HAS_HPMSDK_PWMV2=y,HPMSOC_HAS_HPMSDK_SDM=y,HPMSOC_HAS_HPMSDK_PLB=y,HPMSOC_HAS_HPMSDK_SYNT=y,HPMSOC_HAS_HPMSDK_TRGM=y,HPMSOC_HAS_HPMSDK_ENET=y,HPMSOC_HAS_HPMSDK_USB=y,HPMSOC_HAS_HPMSDK_ESC=y,HPMSOC_HAS_HPMSDK_OTP=y,HPMSOC_HAS_HPMSDK_SYSCTL=y,HPMSOC_HAS_HPMSDK_IOC=y,HPMSOC_HAS_HPMSDK_PLLCTLV2=y,HPMSOC_HAS_HPMSDK_PPOR=y,HPMSOC_HAS_HPMSDK_PCFG=y,HPMSOC_HAS_HPMSDK_PDGO=y,HPMSOC_HAS_HPMSDK_PGPR=y,HPMSOC_HAS_HPMSDK_HYBRID_XPI=y,HPMSOC_HAS_HPMSDK_PMP=y",
+        "linker":"D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/toolchains/iar/flash_xip.icf",
+        "link_symbols":"_flash_size=1M,_noncacheable_size=64K",
+        "sdk_base":"D:/sdk_env_v1.11.0/hpm_sdk",
+        "board":"hpm5e31_LuckyCAT",
+        "board_dir":"D:/hpm_sdk_custom/boards/hpm5e31_LuckyCAT",
+        "soc":"HPM5E31",
+        "register_definition":"D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/hpm_iar_reg.xml",
+        "cpu_register_definition":"D:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/hpm_iar_riscv_cpu_regs.xml",
+        "post_build_command":"",
+        "heap_size":"0x4000",
+        "stack_size":"0x4000",
+        "cplusplus":"11",
+        "gcc_opt_level":"",
+        "target_device_name":"HPM5E31xPBx\tHPMicro HPM5E31xPBx",
+        "cflags":"",
+        "compiler_abi":"ilp32",
+        "compiler_arch":"rv32imac_Zba_Zbb_Zbc_Zbs",
+        "compiler_arch_exts_csr":"1",
+        "compiler_arch_exts_fencei":"1",
+        "iar_link_input":"",
+        "iar_link_options":"",
+        "enable_dsp":"0",
+        "enable_andesperf":"0",
+        "enable_cpp_exceptions":"",
+        "extra_iar_options":"--diag_suppress Pa089, --diag_suppress Pe236, --diag_suppress Pe188, --diag_suppress Pe546, --diag_suppress Pe111",
+        "linked_project_name":"",
+        "linked_project_path":"D:/hpm_sdk_custom/samples/drivers/pwmv2/sync_output/",
+        "is_secondary_core":"0",
+        "cc_preinclude":"",
+        "asm_preinclude":"",
+        "iar_opt_no_size_const":""
+        
+            }
+        }

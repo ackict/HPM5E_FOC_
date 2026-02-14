@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iarUserArgVars>
+<group name="HPM_SDK" active="true">
+<variable>
+<name>HPM_SDK_BASE</name>
+<value>D:/sdk_env_v1.11.0/hpm_sdk</value>
+</variable>
+</group>
+</iarUserArgVars>
